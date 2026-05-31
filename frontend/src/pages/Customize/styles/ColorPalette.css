@@ -1,0 +1,83 @@
+/* 🔹 Color Palette Container */
+.color-palette-container {
+  padding: 1.5rem;
+  border-radius: 8px;
+  /* Optional: add background & shadow if needed */
+  /* background-color: #fff; */
+  /* box-shadow: 0 2px 8px rgba(0,0,0,0.1); */
+}
+
+/* Each row in the palette */
+.color-palette-row {
+  margin-bottom: 1.5rem;
+}
+
+/* Label above swatches */
+.color-palette-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #4b2061;
+  font-size: 1rem;
+}
+
+/* Swatches container */
+.color-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Individual color swatch */
+.color-swatch {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+  border: 2px solid transparent;
+}
+
+.color-swatch:hover {
+  transform: scale(1.1);
+  border-color: #4b2061;
+}
+
+/* 🔹 Responsive Breakpoints */
+
+/* Tablet / Medium screens */
+@media (max-width: 992px) {
+  .color-palette-label {
+    font-size: 0.95rem;
+  }
+
+  .color-swatch {
+    width: 22px;
+    height: 22px;
+  }
+
+  .color-swatches {
+    gap: 0.4rem;
+  }
+}
+
+/* Mobile / Small screens */
+@media (max-width: 480px) {
+  .color-palette-label {
+    font-size: 0.9rem;
+  }
+
+  .color-swatch {
+    width: 20px;
+    height: 20px;
+  }
+
+  .color-swatches {
+    justify-content: flex-start; /* align swatches neatly */
+    gap: 0.35rem;
+  }
+
+  .color-palette-row {
+    margin-bottom: 1rem;
+  }
+}

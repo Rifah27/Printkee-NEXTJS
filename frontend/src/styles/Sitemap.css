@@ -1,0 +1,136 @@
+/* --- Sitemap Container --- */
+.sitemap-container {
+  padding: 50px 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* --- Main Heading --- */
+.sitemap-heading {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  text-align: center;
+  color: #4b2061; /* purple brand color */
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.sitemap-heading::after {
+  content: "";
+  width: 70px;
+  height: 3px;
+  background: #f39c12; /* accent yellow */
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* --- Description --- */
+.sitemap-description {
+  font-size: 1.05rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+/* --- Subheadings --- */
+.sitemap-subheading {
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #333;
+  border-left: 4px solid #f39c12;
+  padding-left: 10px;
+  margin-bottom: 14px;
+}
+
+/* --- List --- */
+.sitemap-list {
+  list-style: none;
+  padding-left: 15px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.sitemap-list li {
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 18px;
+}
+
+.sitemap-list li::before {
+  content: "›"; /* modern arrow */
+  color: #4b2061;
+  position: absolute;
+  left: 0;
+  font-size: 1.1rem;
+  top: 2px;
+}
+
+/* --- Links --- */
+.sitemap-list a {
+  color: #4b2061;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.sitemap-list a:hover {
+  color: #f39c12;
+  padding-left: 4px;
+}
+
+/* --- Responsive Styling --- */
+@media (max-width: 1024px) {
+  .sitemap-container {
+    padding: 40px 20px;
+  }
+  .sitemap-heading {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sitemap-container {
+    margin: 20px;
+    border-radius: 12px;
+  }
+  .sitemap-heading {
+    font-size: 2rem;
+  }
+  .sitemap-description {
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+  }
+  .sitemap-subheading {
+    font-size: 1.15rem;
+  }
+  .sitemap-list {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sitemap-container {
+    padding: 30px 15px;
+  }
+  .sitemap-heading {
+    font-size: 1.7rem;
+  }
+  .sitemap-description {
+    font-size: 0.9rem;
+  }
+  .sitemap-subheading {
+    font-size: 1.05rem;
+  }
+  .sitemap-list {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,84 @@
+/* 🔹 Canvas Toolbar */
+.canvas-toolbar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap; /* allows buttons to wrap on smaller screens */
+  margin-bottom: 1rem;
+  padding-top: 8px;
+  justify-content: flex-end;
+}
+
+.canvas-toolbar__button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background-color: #fcefdb;
+  color: #4b2061;
+  border: 1px solid #e0d0b8;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Poppins', sans-serif;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.canvas-toolbar__button:hover {
+  background-color: #f3e2c7;
+  transform: translateY(-1px);
+}
+
+.canvas-toolbar__button .icon-2 {
+  font-size: 1.2rem;
+}
+
+.canvas-toolbar-wrapper {
+  padding: 12px 1rem 8px;
+  border-bottom: 1px solid #eee;
+  margin-top: 8px;
+}
+
+/* 🔹 Responsive Breakpoints */
+
+/* Tablet / Small screens */
+@media (max-width: 992px) {
+  .canvas-toolbar {
+    justify-content: flex-start; /* align buttons to left */
+    gap: 0.4rem;
+  }
+
+  .canvas-toolbar__button {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.8rem;
+    height: 36px;
+  }
+
+  .canvas-toolbar__button .icon-2 {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .canvas-toolbar {
+    justify-content: center; /* center buttons on tiny screens */
+    gap: 0.3rem;
+  }
+
+  .canvas-toolbar__button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.7rem;
+    height: 32px;
+  }
+
+  .canvas-toolbar__button .icon-2 {
+    font-size: 0.95rem;
+  }
+
+  .canvas-toolbar-wrapper {
+    padding: 10px 0.5rem 6px;
+  }
+}

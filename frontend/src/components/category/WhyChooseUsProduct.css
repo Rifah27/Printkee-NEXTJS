@@ -1,0 +1,195 @@
+.wcup-wrapper {
+  width: 100%;
+  padding: 50px 20px;
+  background: #ffffff;
+  border-radius: 16px;
+  margin: 50px auto;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* TITLE */
+.wcup-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #4b2061;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.wcup-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #f39c12;
+  display: block;
+  margin: 12px auto 0 auto;
+  border-radius: 10px;
+}
+
+/* GRID */
+.wcup-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* CARD */
+.wcup-card {
+  background: #ffffff;
+  border: 1px solid rgba(75, 32, 97, 0.15);
+  border-radius: 14px;
+  padding: 22px 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(75, 32, 97, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.wcup-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 28px rgba(75, 32, 97, 0.18);
+  border-color: #f39c12;
+}
+
+/* Gold left accent strip */
+.wcup-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: #f39c12;
+  opacity: 0.7;
+  border-radius: 6px 0 0 6px;
+  transition: 0.3s ease;
+}
+
+.wcup-card:hover::before {
+  opacity: 1;
+}
+
+/* Card Title */
+.wcup-card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #4b2061;
+  margin-bottom: 10px;
+}
+
+/* Card Text */
+.wcup-card-text {
+  font-size: 1.03rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+/* =======================================================
+   RESPONSIVE DESIGN — FULLY OPTIMIZED
+======================================================= */
+
+/* ---------- Large Tablets (900px) ---------- */
+@media (max-width: 900px) {
+  .wcup-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .wcup-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* ---------- Tablets (768px) ---------- */
+@media (max-width: 768px) {
+  .wcup-wrapper {
+    padding: 40px 18px;
+  }
+  .wcup-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  .wcup-card {
+    padding: 20px 18px;
+  }
+  .wcup-card-title {
+    font-size: 1.25rem;
+  }
+  .wcup-card-text {
+    font-size: 1rem;
+  }
+}
+
+/* ---------- Mobile (600px) ---------- */
+@media (max-width: 600px) {
+  .wcup-grid {
+    grid-template-columns: 1fr;
+  }
+  .wcup-wrapper {
+    margin: 40px auto;
+  }
+  .wcup-card {
+    padding: 18px 16px;
+  }
+  .wcup-card-title {
+    font-size: 1.2rem;
+  }
+  .wcup-title {
+    font-size: 1.9rem;
+  }
+}
+
+/* ---------- Small Mobile (480px) ---------- */
+@media (max-width: 480px) {
+   .wcup-grid{
+    margin: 0;
+    padding: 0;
+   }
+  .wcup-title {
+    font-size: 1.75rem;
+  }
+  .wcup-card-title {
+    font-size: 1.15rem;
+  }
+  .wcup-card-text {
+    font-size: 0.95rem;
+  }
+  .wcup-card {
+    padding: 16px 14px;
+  }
+}
+
+/* ---------- Extra Small Mobile (400px) ---------- */
+@media (max-width: 400px) {
+  .wcup-title {
+    font-size: 1.6rem;
+  }
+  .wcup-card-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* ---------- Ultra Small Devices (360px) ---------- */
+@media (max-width: 360px) {
+  .wcup-title {
+    font-size: 1.5rem;
+  }
+  .wcup-card-title {
+    font-size: 1.05rem;
+  }
+}
+
+/* ---------- Ultra Compact Devices (320px) ---------- */
+@media (max-width: 320px) {
+  .wcup-title {
+    font-size: 1.35rem;
+  }
+  .wcup-card {
+    padding: 14px 12px;
+  }
+  .wcup-card-text {
+    font-size: 0.88rem;
+  }
+}

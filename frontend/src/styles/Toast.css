@@ -1,0 +1,64 @@
+/* styles/Toast.css */
+.printkee-toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  min-width: 280px;
+  max-width: 400px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  z-index: 9999;
+  animation: slideIn 0.3s ease-out;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+}
+
+.printkee-toast .toast-icon {
+  font-size: 20px;
+}
+
+.printkee-toast .toast-message {
+  flex-grow: 1;
+  font-weight: 500;
+}
+
+.toast-close {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Theme-based background styles */
+.printkee-toast-success {
+  background: linear-gradient(135deg, #4B0C6B, #7F3D99);
+  border-left: 4px solid #d4edda;
+}
+
+.printkee-toast-error {
+  background: linear-gradient(135deg, #6b0f1a, #b50d2d);
+  border-left: 4px solid #f8d7da;
+}
+
+.printkee-toast-info {
+  background: linear-gradient(135deg, #5e1a8b, #8a3ab9);
+  border-left: 4px solid #FFF1DB; /* yellow accent */
+}
+
+/* Entrance animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}

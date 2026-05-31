@@ -1,0 +1,245 @@
+/* ===============================
+   PREMIUM FAQ ACCORDION – BRAND THEME
+================================= */
+
+.pk-faq-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  font-family: var(--font-primary);
+}
+
+.pk-faq-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 45px;
+  color: var(--purple);
+  letter-spacing: 0.5px;
+}
+
+
+/* ----------------------------------------------------
+   FAQ Card Styling – Glass / Premium / Soft Shadow
+----------------------------------------------------- */
+.pk-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.pk-faq-card {
+  background: var(--beige-light);
+  padding: 18px 26px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(75, 32, 97, 0.12);
+  box-shadow: var(--shadow-medium);
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.pk-faq-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+
+/* ----------------------------------------------------
+   Question Row – Button Element
+----------------------------------------------------- */
+
+.pk-faq-question {
+  background: none;
+  border: none;
+  padding: 0;
+  width: 100%;
+  text-align: left;
+
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  outline: none;
+}
+
+.pk-faq-question:focus-visible {
+  outline: 2px solid var(--purple);
+  border-radius: var(--radius-sm);
+}
+
+.pk-faq-question-text {
+  flex: 1;
+}
+
+.pk-faq-icon {
+  font-size: 1.5rem;
+  color: var(--purple);
+  transition: transform var(--transition);
+}
+
+.pk-faq-rotate {
+  transform: rotate(180deg);
+}
+
+
+/* ----------------------------------------------------
+   Answer – Smooth Expand
+----------------------------------------------------- */
+
+.pk-faq-answer {
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  margin-top: 12px;
+}
+
+.pk-faq-answer-text {
+  background: var(--beige-bg);
+  padding: 16px 18px;
+  border-left: 4px solid var(--gold);
+  color: var(--text-mid);
+  border-radius: var(--radius-sm);
+  font-size: 0.97rem;
+  line-height: 1.65;
+  box-shadow: var(--shadow-soft);
+}
+
+
+/* ==========================================================
+   RESPONSIVE BREAKPOINTS – FULLY OPTIMIZED
+========================================================== */
+
+/* -------- Large Tablets -------- */
+@media (max-width: 1024px) {
+  .pk-faq-title {
+    font-size: 2.2rem;
+  }
+  .pk-faq-card {
+    padding: 18px 22px;
+  }
+}
+
+/* -------- Tablets / Medium Screens -------- */
+@media (max-width: 768px) {
+  .pk-faq-wrapper {
+    margin: 40px auto;
+    padding: 0 16px;
+  }
+  .pk-faq-title {
+    font-size: 2rem;
+    margin-bottom: 35px;
+  }
+  .pk-faq-card {
+    padding: 16px 20px;
+  }
+  .pk-faq-question {
+    font-size: 1.02rem;
+  }
+  .pk-faq-icon {
+    font-size: 1.3rem;
+  }
+  .pk-faq-answer-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* -------- Mobile (600px) -------- */
+@media (max-width: 600px) {
+  .pk-faq-title {
+    font-size: 1.8rem;
+  }
+
+  .pk-faq-card {
+    padding: 16px 18px;
+  }
+
+  .pk-faq-question {
+    font-size: 0.98rem;
+  }
+
+  .pk-faq-answer-text {
+    padding: 14px 16px;
+    font-size: 0.92rem;
+  }
+}
+
+/* -------- Small Mobile (480px) -------- */
+@media (max-width: 480px) {
+  .pk-faq-title {
+    font-size: 1.65rem;
+  }
+
+  .pk-faq-card {
+    padding: 14px 16px;
+  }
+
+  .pk-faq-question {
+    font-size: 0.92rem;
+  }
+
+  .pk-faq-icon {
+    font-size: 1.2rem;
+  }
+
+  .pk-faq-answer-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* -------- Extra Small Mobile (400px) -------- */
+@media (max-width: 400px) {
+  .pk-faq-title {
+    font-size: 1.55rem;
+  }
+
+  .pk-faq-question {
+    font-size: 0.88rem;
+  }
+
+  .pk-faq-answer-text {
+    padding: 12px 14px;
+    font-size: 0.88rem;
+  }
+}
+
+/* -------- Ultra Small (360px) -------- */
+@media (max-width: 360px) {
+  .pk-faq-title {
+    font-size: 1.45rem;
+  }
+
+  .pk-faq-question {
+    font-size: 0.85rem;
+  }
+
+  .pk-faq-card {
+    padding: 12px 14px;
+  }
+}
+
+/* -------- Ultra-Compact Screens (320px and below) -------- */
+@media (max-width: 320px) {
+  .pk-faq-wrapper {
+    padding: 0 10px;
+  }
+
+  .pk-faq-title {
+    font-size: 1.3rem;
+  }
+
+  .pk-faq-question {
+    font-size: 0.82rem;
+  }
+
+  .pk-faq-answer-text {
+    font-size: 0.85rem;
+    
+
+    padding: 10px 10px;
+  }
+}

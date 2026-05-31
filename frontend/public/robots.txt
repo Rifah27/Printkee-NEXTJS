@@ -1,0 +1,19 @@
+User-agent: *
+
+# Allow main site
+Allow: /
+
+# Block admin and backend routes
+Disallow: /admin
+Disallow: /api/
+Disallow: /login
+
+# Block internal search pages
+Disallow: /search
+
+# Allow blog section
+Allow: /blog/
+Allow: /blogs/
+
+# Sitemap
+Sitemap: https://printkee.com/sitemap.xml

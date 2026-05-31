@@ -1,0 +1,226 @@
+
+.subcategory-description-wrapper {
+  width: 100%;
+  margin: 40px 0;
+  padding: 35px 40px;
+  background: var(--white);
+  border-radius: 16px;
+  border: 1px solid rgba(75, 32, 97, 0.12);
+  box-shadow: var(--shadow-medium);
+  font-family: var(--font-primary);
+}
+
+/* PAGE TITLE */
+.subcategory-description-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--purple);
+  margin-bottom: 22px;
+  letter-spacing: 0.3px;
+  text-transform: capitalize;
+}
+
+/* HEADINGS */
+.subcategory-description-content h3 {
+  font-size: 2rem;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: var(--purple-dark);
+  font-weight: 700;
+}
+
+.subcategory-description-content h4 {
+  font-size: 1.25rem;
+  margin-top: 22px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: var(--purple-dark);
+}
+
+/* PARAGRAPHS */
+.subcategory-description-content p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-dark);
+  margin-bottom: 14px;
+}
+
+/* BULLET LISTS */
+.subcategory-description-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 12px 0 18px;
+}
+
+.subcategory-description-content li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+
+.subcategory-description-content li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: var(--purple);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* Auto-detected .bullet-item */
+.subcategory-description-content .bullet-item {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+
+.subcategory-description-content .bullet-item::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--purple);
+}
+
+
+/* ======================================================
+   RESPONSIVE — FULLY OPTIMIZED
+====================================================== */
+
+/* --- Tablets (max-width: 900px) --- */
+@media (max-width: 900px) {
+  .subcategory-description-wrapper {
+    padding: 30px 32px;
+  }
+
+  .subcategory-description-title {
+    font-size: 1.9rem;
+  }
+
+  .subcategory-description-content h3 {
+    font-size: 1.7rem;
+  }
+
+  .subcategory-description-content h4 {
+    font-size: 1.2rem;
+  }
+}
+
+/* --- Mobile (max-width: 600px) --- */
+@media (max-width: 600px) {
+  .subcategory-description-wrapper {
+    padding: 24px 18px;
+    margin: 30px 0;
+  }
+
+  .subcategory-description-title {
+    font-size: 1.65rem;
+    margin-bottom: 16px;
+  }
+
+  .subcategory-description-content h3 {
+    font-size: 1.45rem;
+  }
+
+  .subcategory-description-content h4 {
+    font-size: 1.15rem;
+  }
+
+  .subcategory-description-content p,
+  .subcategory-description-content li,
+  .subcategory-description-content .bullet-item {
+    font-size: 0.96rem;
+  }
+}
+
+/* --- Small Mobile (max-width: 480px) --- */
+@media (max-width: 480px) {
+  .subcategory-description-wrapper {
+    padding: 22px 15px;
+  }
+
+  .subcategory-description-title {
+    font-size: 1.5rem;
+  }
+
+  .subcategory-description-content h3 {
+    font-size: 1.35rem;
+  }
+
+  .subcategory-description-content h4 {
+    font-size: 1.1rem;
+  }
+
+  .subcategory-description-content p,
+  .subcategory-description-content li {
+    font-size: 0.92rem;
+  }
+}
+
+/* --- XS Mobile (max-width: 400px) --- */
+@media (max-width: 400px) {
+  .subcategory-description-wrapper {
+    padding: 20px 14px;
+  }
+
+  .subcategory-description-title {
+    font-size: 1.35rem;
+  }
+
+  .subcategory-description-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .subcategory-description-content h4 {
+    font-size: 1.05rem;
+  }
+}
+
+/* --- Ultra Small (max-width: 360px) --- */
+@media (max-width: 360px) {
+  .subcategory-description-wrapper {
+    padding: 18px 12px;
+  }
+
+  .subcategory-description-title {
+    font-size: 1.25rem;
+  }
+
+  .subcategory-description-content p,
+  .subcategory-description-content li {
+    font-size: 0.9rem;
+  }
+}
+
+/* --- Ultra-Compact Devices (max-width: 320px) --- */
+@media (max-width: 320px) {
+  .subcategory-description-wrapper {
+    padding: 16px 10px;
+  }
+
+  .subcategory-description-title {
+    font-size: 1.15rem;
+  }
+
+  .subcategory-description-content h3 {
+    font-size: 1.15rem;
+  }
+
+  .subcategory-description-content h4 {
+    font-size: 1rem;
+  }
+
+  .subcategory-description-content p,
+  .subcategory-description-content li {
+    font-size: 0.88rem;
+  }
+}

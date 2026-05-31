@@ -1,0 +1,56 @@
+
+.cta-banner {
+  width: 100%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+
+.cta-banner a {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  align-self: center;
+  transition: transform 0.2s;
+  overflow: hidden;
+}
+
+.cta-banner a:hover,
+.cta-banner a:focus {
+  cursor: pointer;
+  transform: scale(1.01); /* subtle zoom effect */
+}
+
+/* 🔹 Full Banner Image */
+.cta-full-image {
+  width: 100%;
+  height: 300px;
+  display: block;
+  object-fit: cover; /* cover fits better than fit */
+  align-self: center;
+  border-radius: 8px;
+}
+
+
+@media (min-width: 1200px) {
+  .cta-full-image {
+    height: 550px;
+  }
+}
+
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .cta-full-image {
+    height: 400px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .cta-banner {
+    display: none;
+  }
+}

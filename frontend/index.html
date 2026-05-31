@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Dynamic SEO placeholders -->
+  <title>__TITLE__</title>
+
+  <meta name="description" content="__DESCRIPTION__" />
+
+  <link rel="canonical" href="__CANONICAL__" />
+
+</head>
+
+<body>
+
+  <!-- Hidden SEO HTML for crawlers -->
+  <div id="seo-content">
+    __SEO_CONTENT__
+  </div>
+
+  <!-- React App Root -->
+  <div id="root"></div>
+
+  <script type="module" src="/src/main.jsx"></script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4BP50X9E7L"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4BP50X9E7L');
+  </script>
+
+</body>
+
+<!-- Hide SEO content visually but keep crawlable -->
+<style>
+#seo-content{
+  position:absolute;
+  left:-9999px;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+</style>
+
+</html>

@@ -1,0 +1,207 @@
+
+.testimonials-section {
+  background: hsl(49, 100%, 97%);
+  padding: 60px 0 40px 0;
+  text-align: center;
+}
+
+.section-title-2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0px;
+  color: #4b2061;
+  letter-spacing: 0.5px;
+}
+
+.section-subtitle-2 {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonials-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.testimonial-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(34, 34, 59, 0.07);
+  padding: 32px 28px 24px 28px;
+  max-width: 340px;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  transition: box-shadow 0.2s;
+}
+
+.testimonial-card:hover {
+  box-shadow: 0 8px 32px rgba(34, 34, 59, 0.13);
+}
+
+.quote-icon {
+  color: #4b2061;
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.testimonial-text {
+  font-size: 1.08rem;
+  color: #393e46;
+  margin-bottom: 22px;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.testimonial-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 4px;
+  margin-top: auto;
+}
+
+.client-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0;
+  color: #22223b;
+}
+
+.client-role {
+  font-size: 0.97rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+.brand-logos-strip-2 {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid #ececec;
+}
+
+.brand-title-2 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #393e46;
+  margin-bottom: 18px;
+  letter-spacing: 0.2px;
+}
+
+.brands-logo-container-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  flex-wrap: wrap;
+}
+
+.brand-logo-2 {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(1) brightness(0.85);
+  opacity: 0.85;
+  transition: filter 0.2s, opacity 0.2s;
+}
+
+.brand-logo-2:hover {
+  filter: none;
+  opacity: 1;
+}
+
+/* ====================================== */
+/* 📱 Extra Responsive Improvements */
+/* ====================================== */
+
+/* Very small phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .testimonials-section {
+    padding: 28px 0 20px 0;
+  }
+
+  .testimonial-card {
+    width: 92%;
+    padding: 18px 12px;
+    border-radius: 14px;
+  }
+
+  .testimonial-text {
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+
+  .client-name {
+    font-size: 0.95rem;
+  }
+
+  .client-role {
+    font-size: 0.85rem;
+  }
+
+  .brand-logo-2 {
+    height: 38px;
+  }
+
+  .brands-logo-container-2 {
+    gap: 18px;
+  }
+}
+
+/* Ultra small smartphones (max-width: 360px) */
+@media (max-width: 360px) {
+  .section-title-2 {
+    font-size: 1.25rem;
+  }
+
+  .section-subtitle-2 {
+    font-size: 0.85rem;
+    padding: 0 6px;
+  }
+
+  .testimonial-card {
+    width: 94%;
+    padding: 14px 10px;
+  }
+
+  .testimonial-text {
+    font-size: 0.82rem;
+  }
+
+  .brand-title-2 {
+    font-size: 0.9rem;
+  }
+
+  .brand-logo-2 {
+    height: 32px;
+  }
+}
+
+/* Super compact devices (max-width: 320px) */
+@media (max-width: 320px) {
+  .section-title-2 {
+    font-size: 1.15rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.78rem;
+  }
+
+  .testimonial-card {
+    padding: 12px 8px;
+  }
+
+  .brand-logo-2 {
+    height: 28px;
+  }
+}

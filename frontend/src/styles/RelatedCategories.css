@@ -1,0 +1,150 @@
+/* --- Related Categories Section --- */
+.related-categories {
+  background: #fdf6ec; /* soft beige background */
+  padding: 60px 20px 80px;
+  text-align: center;
+  max-width: 100%;
+}
+
+/* --- Section Title --- */
+.related-categories h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #4b2061; /* rich purple */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.related-categories h2::after {
+  content: "";
+  width: 70px;
+  height: 3px;
+  background: #f5c518; /* warm yellow accent */
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* --- Grid Layout --- */
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+  padding: 0 20px;
+}
+
+/* --- Grid Items --- */
+.related-item {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eee;
+}
+
+.related-item img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+/* Hover Effect */
+.related-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-color: #f5c518; /* yellow accent on hover */
+}
+
+.related-item:hover img {
+  transform: scale(1.05);
+}
+
+/* --- Item Name --- */
+.item-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  padding: 16px;
+  background: #fff;
+  border-top: 1px solid #eee;
+  text-transform: capitalize;
+  transition: color 0.3s ease;
+}
+
+.related-item:hover .item-name {
+  color: #4b2061; /* purple text on hover */
+}
+
+/* --- Responsive Breakpoints --- */
+
+/* Tablets (≤1024px) */
+@media (max-width: 1024px) {
+  .related-categories {
+    padding: 50px 16px 60px;
+  }
+
+  .related-categories h2 {
+    font-size: 2rem;
+    margin-bottom: 32px;
+  }
+
+  .related-grid {
+    gap: 24px;
+  }
+
+  .related-item img {
+    height: 200px;
+  }
+}
+
+/* Mobile Large (≤768px) */
+@media (max-width: 768px) {
+  .related-categories {
+    padding: 40px 14px 50px;
+  }
+
+  .related-categories h2 {
+    font-size: 1.8rem;
+  }
+
+  .related-item img {
+    height: 180px;
+  }
+
+  .item-name {
+    font-size: 0.95rem;
+    padding: 14px;
+  }
+}
+
+/* Mobile Small (≤480px) */
+@media (max-width: 480px) {
+  .related-categories {
+    padding: 30px 20px 40px;
+  }
+
+  .related-categories h2 {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+  }
+
+  .related-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0;
+  }
+
+  .related-item img {
+    height: 100px;
+  }
+
+  .item-name {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+}

@@ -1,0 +1,206 @@
+.export-buttons-container {
+  padding: 1.5rem;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.size-inputs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.size-inputs > div {
+  display: flex;
+  align-items: center;
+}
+
+.size-label {
+  margin-right: 0.5rem;
+  font-weight: 500;
+  color: #4b2061;
+  min-width: 40px;
+}
+
+.size-input {
+  width: 60px;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.total-quantity {
+  grid-column: span 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.5rem;
+  border-top: 1px solid #eee;
+  font-family: 'Poppins', sans-serif;
+}
+
+.type-selection {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  font-family: 'Poppins', sans-serif;
+  flex-wrap: wrap;
+}
+
+.type-dropdown {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  color: #4b2061;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btns-container {
+  display: flex;
+  gap: 1rem;
+  font-family: 'Poppins', sans-serif;
+  flex-wrap: wrap;
+}
+
+.view-schart-btn, .export-pdf-btn {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.view-schart-btn {
+  background-color: #fcefdb;
+  color: #4b2061;
+}
+
+.view-schart-btn:hover {
+  background-color: #f3e2c7;
+}
+
+.export-pdf-btn {
+  background-color: #4b2061;
+  color: white;
+}
+
+.export-pdf-btn:hover {
+  background-color: #f39c12;
+}
+
+.size-chart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.size-chart-bg {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow: auto;
+  position: relative;
+}
+
+.size-chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  flex-wrap: wrap;
+}
+
+.size-chart-title {
+  color: #4b2061;
+  margin: 0;
+}
+
+.close-chart-btn {
+  background: none;
+  border: none;
+  color: #4b2061;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.size-chart-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+@media (max-width: 992px) {
+  .size-inputs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .total-quantity {
+    grid-column: span 2;
+  }
+
+  .type-selection {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .btns-container {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .size-inputs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    width: 80%;
+    font-size: 0.8rem;
+  }
+
+  .total-quantity {
+    grid-column: span 1;
+  }
+
+  .type-dropdown {
+    width: 100%;
+  }
+
+  .view-schart-btn, .export-pdf-btn {
+    width: 100%;
+  }
+
+  .size-chart-bg {
+    padding: 1rem;
+  }
+
+  .size-chart-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .close-chart-btn {
+    align-self: flex-end;
+  }
+}

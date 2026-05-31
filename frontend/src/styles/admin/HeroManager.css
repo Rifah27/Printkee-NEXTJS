@@ -1,0 +1,306 @@
+:root {
+  --brand-purple: #5b2d8b;
+  --brand-purple-dark: #4a2374;
+  --brand-gold: #d4af37;
+  --brand-gold-dark: #b8962e;
+
+  --neutral-gray: #6b7280;
+  --light-border: #e5e7eb;
+  --light-bg: #faf9fc;
+  --white: #ffffff;
+}
+
+
+.hm-wrapper {
+  background: var(--white);
+  padding: 25px;
+  
+  border: 1px solid var(--light-border);
+  
+}
+
+.hm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hm-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--brand-purple);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hm-description {
+  margin-top: 10px;
+  color: var(--neutral-gray);
+}
+
+/* ===============================
+   ADD BUTTON
+================================ */
+
+.hm-add-btn {
+  background: var(--brand-purple);
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Outfit', sans-serif;
+  transition: 0.2s;
+}
+
+.hm-add-btn:hover {
+  background: var(--brand-gold);
+  color: #1a1a1a;
+}
+
+/* ===============================
+   LIST
+================================ */
+
+.hm-slide-list {
+  margin-top: 25px;
+  list-style: none;
+  padding: 0;
+}
+
+/* ===============================
+   ITEM CARD
+================================ */
+
+.hm-slide-item {
+  padding: 16px;
+  border: 1px solid var(--light-border);
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: var(--light-bg);
+  gap: 20px;
+}
+
+/* Prevent clipping issues */
+.hm-slide-item * {
+  box-sizing: border-box;
+}
+
+/* ===============================
+   INFO
+================================ */
+
+.hm-slide-info {
+  max-width: 75%;
+}
+
+.hm-slide-title {
+  font-size: 18px;
+  color: var(--brand-purple);
+}
+
+.hm-slide-type {
+  font-size: 13px;
+  color: var(--neutral-gray);
+  margin-left: 5px;
+}
+
+.hm-slide-sub {
+  margin-top: 6px;
+  color: var(--neutral-gray);
+  font-size: 14px;
+}
+
+/* ===============================
+   ACTION BUTTONS (FIXED)
+================================ */
+
+.hm-slide-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* ===============================
+   EDIT / DELETE BUTTONS
+================================ */
+
+.hm-edit-btn,
+.hm-delete-btn,
+.hm-delete-btn-2 {
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Outfit', sans-serif;
+  transition: 0.2s;
+}
+
+/* EDIT */
+.hm-edit-btn {
+  background: var(--brand-gold);
+  color: #1a1a1a;
+}
+
+.hm-edit-btn:hover {
+  background: var(--brand-gold-dark);
+}
+
+/* DELETE */
+.hm-delete-btn,
+.hm-delete-btn-2 {
+  background: #c62828;
+  color: white;
+}
+
+.hm-delete-btn:hover,
+.hm-delete-btn-2:hover {
+  background: #9a1f1f;
+}
+
+/* ===============================
+   FORM ELEMENTS
+================================ */
+
+.hm-form-group {
+  margin-top: 12px;
+}
+
+.hm-input-label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  color: var(--brand-purple);
+}
+
+.hm-select {
+  width: 94%;
+  padding: 10px;
+  border: 1px solid var(--light-border);
+  font-family: 'Outfit', sans-serif;
+}
+
+/* ===============================
+   IMAGE PREVIEW
+================================ */
+
+.hm-preview {
+  margin-top: 12px;
+}
+
+.hm-preview img,
+.hm-preview video {
+  width: 50%;
+  border: 1px solid var(--light-border);
+}
+
+/* ===============================
+   SAVE BUTTON
+================================ */
+
+.hm-save-btn {
+  margin-top: 18px;
+  background: var(--brand-purple);
+  padding: 10px 18px;
+  border: none;
+  color: white;
+  font-weight: 400;
+  font-family: 'Outfit', sans-serif;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.hm-save-btn:hover {
+  background: var(--brand-gold);
+  color: #1a1a1a;
+}
+
+/* ===============================
+   EMPTY STATE
+================================ */
+
+.hm-empty {
+  color: var(--neutral-gray);
+  padding: 10px 0;
+}
+
+/* ===============================
+   FILE UPLOAD
+================================ */
+
+.hm-upload-group {
+  margin: 12px 0;
+}
+
+.hm-file-input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid var(--light-border);
+  background: var(--light-bg);
+  cursor: pointer;
+}
+
+.hm-file-input:hover {
+  border-color: var(--brand-purple);
+}
+
+/* ===============================
+   PAGINATION
+================================ */
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 12px 0;
+}
+
+.pg-btn,
+.pg-number {
+  padding: 6px 12px;
+  border: 1px solid var(--light-border);
+  background: white;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  transition: 0.2s;
+  font-size: 14px;
+}
+
+.pg-btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pg-number.active {
+  background: var(--brand-purple);
+  color: white;
+  border-color: var(--brand-purple);
+}
+
+.pg-number:hover,
+.pg-btn:hover:not([disabled]) {
+  background: var(--brand-gold);
+  color: #1a1a1a;
+  border-color: var(--brand-gold);
+}
+
+.pg-dots {
+  padding: 0 6px;
+  color: #777;
+  font-size: 14px;
+}
