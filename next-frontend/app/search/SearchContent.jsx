@@ -1,29 +1,7 @@
-"use client";
-import { useEffect, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
-import { api } from '../../lib/api';
 import ProductGrid from '../../components/ProductGrid';
 
-export default function SearchContent() {
-  const searchParams = useSearchParams();
-  const query = searchParams.get('q') || '';
-  const category = searchParams.get('cat') || '';
-  const [results, setResults] = useState([]);
-
-  useEffect(() => {
-    if (!query && !category) return;
-
-    const params = { search: query };
-    if (category) params.category = category;
-
-    api
-      .get('/product/all', { params })
-      .then((res) => setResults(res.data.items || []))
-      .catch((err) => {
-        console.error('Search API error:', err);
-        setResults([]);
-      });
-  }, [query, category]);
+export default function SearchContent({ initialResults = [], query = '', category = '' }) {
+  const results = initialResults;
 
   return (
     <section className="container py-20">

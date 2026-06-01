@@ -167,6 +167,38 @@ export default function AdminResourceManager({
     setForm((current) => ({ ...current, [name]: value }));
   };
 
+  const handleImageUpload = async (event, fieldName) => {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    try {
+      const formData = new FormData();
+      formData.append("image", file);
+      
+      setMessage({ type: "info", text: "Uploading image..." });
+      
+      // Attempt to use category upload route, fallback to generic /upload if needed
+      const uploadEndpoint = endpoints.list?.includes("product") 
+        ? "/product/upload" 
+        : endpoints.list?.includes("hero")
+          ? "/hero/upload"
+          : "/category/upload";
+          
+      const res = await api.post(uploadEndpoint, formData, {
+        headers: {
+          ...authHeader(),
+          "Content-Type": "multipart/form-data"
+        }
+      });
+      
+      setForm((current) => ({ ...current, [fieldName]: res.data.url }));
+      setMessage({ type: "success", text: "Image uploaded successfully." });
+    } catch (err) {
+      console.error("Upload error:", err);
+      setMessage({ type: "error", text: "Failed to upload image." });
+    }
+  };
+
   const resetForm = () => {
     setEditingId(null);
     setForm(blankForm);
@@ -330,6 +362,29 @@ export default function AdminResourceManager({
                   placeholder={field.placeholder}
                   required={field.required}
                 />
+              ) : field.name === "image" || field.name === "images" || field.type === "file" ? (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  <input
+                    type="file"
+                    accept="image/*"
+                    onChange={(event) => handleImageUpload(event, field.name)}
+                  />
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                    <span style={{ fontSize: '12px', color: '#666' }}>OR paste URL:</span>
+                    <input
+                      type="text"
+                      value={form[field.name] ?? ""}
+                      onChange={(event) => handleChange(field.name, event.target.value)}
+                      placeholder={field.placeholder}
+                      style={{ flex: 1 }}
+                    />
+                  </div>
+                  {form[field.name] && (
+                    <div style={{ marginTop: '10px' }}>
+                      <img src={getPublicUrl(form[field.name])} alt="Preview" style={{ maxHeight: '100px', borderRadius: '8px' }} />
+                    </div>
+                  )}
+                </div>
               ) : (
                 <input
                   type={field.type || "text"}

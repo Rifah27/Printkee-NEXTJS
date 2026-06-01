@@ -1,25 +1,43 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import BlogCard from "../../components/BlogCard";
-import { api } from "../../lib/api";
 
-export default function BlogListPage() {
-  const [blogs, setBlogs] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
+export const metadata = {
+  title: "Blog | Printkee",
+  description: "Read the latest corporate gifting trends, case studies, and insights from PrintKee.",
+  alternates: {
+    canonical: `https://printkee.com/blogs`,
+  },
+  openGraph: {
+    title: "Blog | Printkee",
+    description: "Read the latest corporate gifting trends, case studies, and insights from PrintKee.",
+    url: `https://printkee.com/blogs`,
+    siteName: 'Printkee',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Blog | Printkee",
+    description: "Read the latest corporate gifting trends, case studies, and insights from PrintKee.",
+  }
+};
 
-  useEffect(() => {
-    api
-      .get("/blogs")
-      .then((res) => setBlogs(Array.isArray(res.data) ? res.data : []))
-      .catch((err) => {
-        console.error(err);
-        setError("Unable to load blogs right now.");
-      })
-      .finally(() => setLoading(false));
-  }, []);
+export default async function BlogListPage() {
+  let blogs = [];
+  let error = "";
+
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5030/api'}/blogs`, {
+      next: { revalidate: 3600 }
+    });
+    if (res.ok) {
+      blogs = await res.json();
+    } else {
+      error = "Unable to load blogs right now.";
+    }
+  } catch (err) {
+    console.error("Failed to fetch blogs:", err);
+    error = "Unable to load blogs right now.";
+  }
 
   return (
     <main className="printkee-page blogs-redesign">
@@ -35,11 +53,9 @@ export default function BlogListPage() {
 
       <section className="blogs-redesign__list">
         <div className="container">
-          {loading ? (
-            <p className="blogs-redesign__empty">Loading blogs...</p>
-          ) : error ? (
+          {error ? (
             <p className="blogs-redesign__empty">{error}</p>
-          ) : blogs.length === 0 ? (
+          ) : !blogs || blogs.length === 0 ? (
             <p className="blogs-redesign__empty">No blogs available at the moment.</p>
           ) : (
             <div className="blogs-redesign__grid">

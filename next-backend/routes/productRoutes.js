@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const { Category, Subcategory, Product } = require("./models");
+const Category = require("../models/Category");
+const Subcategory = require("../models/Subcategory");
+const Product = require("../models/product");
 
 router.get(
   "/product-fetch/:categorySlug/:subcategorySlug/:productSlug",

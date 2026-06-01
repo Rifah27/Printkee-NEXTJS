@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { getPublicUrl } from "../lib/api";
 

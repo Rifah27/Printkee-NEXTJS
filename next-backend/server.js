@@ -22,14 +22,18 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/api", allRoutes);
 
 app.use("/api/blogs", blogRoutes);
+app.use("/api/visitors", require("./routes/visitor"));
+app.use("/api", require("./routes/searchRoutes"));
+app.use("/api", require("./routes/emailRoutes"));
 app.use("/api/product", productRoutes);
 app.use("/api/category", categoryRoutes);
 app.use("/api/subcategory", subcategoryRoutes);
 app.use("/api/admin", adminRoutes);
-console.log("Mongo URI:", process.env.MONGODB_URI ? "FOUND" : "NOT FOUND");
+app.use("/", require("./routes/sitemap"));
+console.log("Mongo URI:", process.env.MONGO_URI ? "FOUND" : "NOT FOUND");
 
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("MongoDB Connected");
   })

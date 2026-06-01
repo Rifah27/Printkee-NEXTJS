@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const { Category, Product, Subcategory } = require("./models");
+const Category = require("../models/Category");
+const Product = require("../models/product");
+const Subcategory = require("../models/Subcategory");
 
 const createToken = (email) =>
   Buffer.from(`${email}:${Date.now()}:printkee-admin`).toString("base64url");

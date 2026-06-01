@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-const { Category, Subcategory } = require("./models");
+const Category = require("../models/Category");
+const Subcategory = require("../models/Subcategory");
 
 router.get("/subcategory-fetch/:categorySlug/:subcategorySlug", async (req, res) => {
   try {

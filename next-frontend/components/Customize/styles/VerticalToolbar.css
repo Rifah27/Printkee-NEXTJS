@@ -1,0 +1,89 @@
+.vertical-toolbar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.vertical-toolbar-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 0.4rem;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  color: #4b2061;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.vertical-toolbar-btn:hover {
+  background-color: #fcefdb;
+}
+
+.vertical-toolbar-btn.active-tool {
+  background-color: #4b2061;
+  color: white;
+}
+
+.vertical-toolbar-btn span {
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.vertical-toolbar-icon {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .vertical-toolbar-container {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.75rem;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+
+  .vertical-toolbar-btn {
+    flex-direction: row;
+    padding: 0.6rem 0.5rem;
+    gap: 0.4rem;
+  }
+
+  .vertical-toolbar-btn span {
+    font-size: 0.8rem;
+  }
+
+  .vertical-toolbar-icon {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .vertical-toolbar-container {
+    gap: 0.3rem;
+    padding: 0.5rem;
+  }
+
+  .vertical-toolbar-btn {
+    padding: 0.5rem 0.4rem;
+  }
+
+  .vertical-toolbar-btn span {
+    font-size: 0.75rem;
+  }
+
+  .vertical-toolbar-icon {
+    font-size: 1rem;
+  }
+}
