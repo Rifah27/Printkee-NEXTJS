@@ -1,0 +1,20 @@
+import "./globals.css";
+import SiteChrome from "../components/SiteChrome";
+
+export const metadata = {
+  title: "PrintKee - Premium Corporate Gifting & Custom Merchandise",
+  description:
+    "Custom promotional products, corporate gifting, branded merchandise, and bulk order support across India.",
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>
+        <div className="app-shell">
+          <SiteChrome>{children}</SiteChrome>
+        </div>
+      </body>
+    </html>
+  );
+}
