@@ -281,7 +281,6 @@ export default function AdminResourceManager({
     setCurrentPage(1);
   }, [debouncedQuery]);
 
-  // Debounce query input to avoid refetching on every keystroke
   useEffect(() => {
     const t = setTimeout(() => setDebouncedQuery(query), 300);
     return () => clearTimeout(t);
