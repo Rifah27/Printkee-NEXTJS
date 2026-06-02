@@ -12,7 +12,6 @@ async function testDatabase() {
     const collections = await mongoose.connection.db.listCollections().toArray();
     report += `✅ Accessible collections: ${collections.map(c => c.name).join(', ')}\n`;
     
-    // Check basic query
     const categories = await mongoose.connection.db.collection('categories').find().limit(1).toArray();
     report += `✅ Queries working. Found category: ${categories.length > 0 ? categories[0].name : 'None'}\n`;
     
