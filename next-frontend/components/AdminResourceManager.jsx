@@ -277,7 +277,6 @@ export default function AdminResourceManager({
   const pageCount = totalPages || 1;
   const showPagination = showTable && pageCount > 1;
 
-  // Reset to first page when query/search changes
   useEffect(() => {
     setCurrentPage(1);
   }, [debouncedQuery]);
