@@ -286,7 +286,6 @@ export default function AdminResourceManager({
     return () => clearTimeout(t);
   }, [query]);
 
-  // Re-load items when page or debounced query changes
   useEffect(() => {
     loadItems();
   }, [loadItems]);
