@@ -177,7 +177,6 @@ export default function AdminResourceManager({
       
       setMessage({ type: "info", text: "Uploading image..." });
       
-      // Attempt to use category upload route, fallback to generic /upload if needed
       const uploadEndpoint = endpoints.list?.includes("product") 
         ? "/product/upload" 
         : endpoints.list?.includes("hero")
