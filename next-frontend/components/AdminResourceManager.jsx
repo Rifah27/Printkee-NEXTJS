@@ -272,7 +272,7 @@ export default function AdminResourceManager({
     }
   };
 
-  // Server-side pagination: items are already paginated by the API
+
   const paginatedItems = items;
   const pageCount = totalPages || 1;
   const showPagination = showTable && pageCount > 1;
