@@ -50,7 +50,37 @@ export default function CustomizeProductPage() {
     );
   } else {
     // Fallback based on product type if no product ID passed
-    productImages = [`/assets/products/${productType}/1.webp`, `/assets/products/${productType}/2.webp`];
+    const fallbackImageMap = {
+      apparel: [
+        "/assets/products/formalshirts/1.webp",
+        "/assets/products/polo/1.webp",
+      ],
+      "welcome-kits": [
+        "/assets/products/welcomekits/1.webp",
+        "/assets/products/welcomekits/2.webp",
+      ],
+      drinkware: [
+        "/assets/products/coffeemugs/1.webp",
+        "/assets/products/sipperbottles/1.webp",
+      ],
+      bags: [
+        "/assets/products/backpacks/1.webp",
+        "/assets/products/dufflebags/1.webp",
+      ],
+      tech: [
+        "/assets/products/wirelesschargers/1.webp",
+        "/assets/products/powerbanks/1.webp",
+      ],
+      "eco-gifts": [
+        "/assets/products/cork/1.webp",
+        "/assets/products/bamboobottles/1.webp",
+      ],
+    };
+
+    productImages = fallbackImageMap[productType] || [
+      "/assets/products/welcomekits/1.webp",
+      "/assets/products/formalshirts/1.webp",
+    ];
   }
 
   const isSVG = SVG_SUPPORTED.includes(productType.toLowerCase());
