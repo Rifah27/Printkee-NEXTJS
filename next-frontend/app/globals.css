@@ -5227,8 +5227,6 @@ body {
     min-height: 18rem;
   }
 }
-
-/* Catalog redesign */
 .catalog-page {
   --catalog-ink: #17211f;
   --catalog-muted: #64706c;
