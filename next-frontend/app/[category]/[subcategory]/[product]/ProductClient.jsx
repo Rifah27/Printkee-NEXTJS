@@ -125,7 +125,6 @@ export default function ProductPage({ initialProduct, initialRelated }) {
     ? resolveProductDescription(product) || copy.intro
     : "";
 
-  // Always run hook in same order
   useEffect(() => {
     if (gallery.length) {
       setSelectedImage(resolveImage(gallery[0]));
