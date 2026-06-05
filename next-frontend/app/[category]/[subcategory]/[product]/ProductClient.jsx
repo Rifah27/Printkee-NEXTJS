@@ -104,7 +104,6 @@ export default function ProductPage({ initialProduct, initialRelated }) {
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
   const router = useRouter();
 
-  // Safe computed values BEFORE conditional return
   const categoryName = product
     ? getName(product.category, params.category)
     : "";
