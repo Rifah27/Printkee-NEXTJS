@@ -131,7 +131,6 @@ export default function ProductPage({ initialProduct, initialRelated }) {
     }
   }, [gallery]);
 
-  // Loading state AFTER hooks
   if (!product) {
     return <div className="catalog-loading">Loading product...</div>;
   }
