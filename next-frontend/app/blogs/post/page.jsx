@@ -337,7 +337,6 @@ export default function BlogPostPage() {
                 </div>
               </div>
 
-              {/* Form Actions */}
               <div className="form-actions">
                 <button
                   type="submit"
