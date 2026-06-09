@@ -24,7 +24,6 @@ export default function BlogPostPage() {
 
   const plainText = (content || "").trim();
 
-  // Update word count
   const updateWordCount = (text) => {
     const words = text.trim().split(/\s+/).filter(word => word.length > 0).length;
     setWordCount(words);
