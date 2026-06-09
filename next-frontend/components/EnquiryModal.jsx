@@ -40,7 +40,6 @@ const EnquiryModal = ({ isOpen, onClose, image, description }) => {
     }
   };
 
-  // Close modal with ESC key
   useEffect(() => {
     if (!isOpen) return;
 
