@@ -112,7 +112,6 @@ const EnquiryModal = ({ isOpen, onClose, image, description }) => {
                 value={formData.name}
               />
 
-              {/* Company */}
               <label htmlFor="company" className="sr-label">
                 Company Name
               </label>
