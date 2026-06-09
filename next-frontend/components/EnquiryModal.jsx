@@ -91,7 +91,6 @@ const EnquiryModal = ({ isOpen, onClose, image, description }) => {
             </p>
           </div>
 
-          {/* RIGHT SECTION */}
           <div className="right-form">
             <h2 id="enquiry-title" className="enquiry-title">
               Get a Quote
