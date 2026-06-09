@@ -187,7 +187,6 @@ export default function BlogPostPage() {
               </div>
             )}
 
-            {/* Form */}
             <form onSubmit={handleSubmit} className="blog-form" noValidate>
               <div className="form-section">
                 <h2 className="section-heading">Featured Image</h2>
