@@ -140,7 +140,6 @@ const EnquiryModal = ({ isOpen, onClose, image, description }) => {
                 value={formData.email}
               />
 
-              {/* Phone */}
               <label htmlFor="phone" className="sr-label">
                 Phone Number
               </label>
