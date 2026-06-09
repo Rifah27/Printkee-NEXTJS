@@ -317,7 +317,6 @@ export default function BlogPostPage() {
                 <span className="char-count">{description.length}/500</span>
               </div>
 
-              {/* Content Section */}
               <div className="form-section">
                 <h2 className="section-heading">Blog Content</h2>
                 <label htmlFor="content" className="form-label">
