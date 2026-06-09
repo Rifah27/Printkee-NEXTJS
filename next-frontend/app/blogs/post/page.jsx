@@ -171,7 +171,6 @@ export default function BlogPostPage() {
         </div>
       </section>
 
-      {/* Editor Section */}
       <section className="blog-post-editor">
         <div className="container">
           <div className="blog-editor-wrapper">
