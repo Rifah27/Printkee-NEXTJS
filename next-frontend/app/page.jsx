@@ -25,7 +25,7 @@ export default async function HomePage() {
   let categories = [];
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5030/api'}/category/categories`, {
-      next: { revalidate: 3600 } // Cache for 1 hour
+      next: { revalidate: 3600 }
     });
     if (res.ok) {
       categories = await res.json();
