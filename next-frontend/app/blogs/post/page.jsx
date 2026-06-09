@@ -238,7 +238,6 @@ export default function BlogPostPage() {
                 {imageError && <p className="form-error">{imageError}</p>}
               </div>
 
-              {/* Blog Details Section */}
               <div className="form-section">
                 <h2 className="section-heading">Blog Details</h2>
                 <div className="form-grid">
