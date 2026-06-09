@@ -155,7 +155,6 @@ const EnquiryModal = ({ isOpen, onClose, image, description }) => {
                 value={formData.phone}
               />
 
-              {/* Requirement */}
               <label htmlFor="requirement" className="sr-label">
                 Your Requirement
               </label>
