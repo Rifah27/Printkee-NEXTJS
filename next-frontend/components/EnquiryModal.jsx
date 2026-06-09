@@ -98,7 +98,6 @@ const EnquiryModal = ({ isOpen, onClose, image, description }) => {
 
             <form onSubmit={handleSubmit} className="enquiry-form">
 
-              {/* Name */}
               <label htmlFor="name" className="sr-label">
                 Your Name
               </label>
