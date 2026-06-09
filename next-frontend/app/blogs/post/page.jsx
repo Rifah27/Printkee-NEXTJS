@@ -300,7 +300,6 @@ export default function BlogPostPage() {
                 </div>
               </div>
 
-              {/* Summary Section */}
               <div className="form-section">
                 <h2 className="section-heading">Summary / Excerpt</h2>
                 <label htmlFor="description" className="form-label">
