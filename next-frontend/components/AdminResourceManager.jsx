@@ -90,7 +90,6 @@ export default function AdminResourceManager({
 
     setLoading(true);
     try {
-      // Merge provided params with current pagination/search
       const pageParam = currentPage || (endpoints.params && endpoints.params.page) || 1;
       const limitParam = pageSize || (endpoints.params && endpoints.params.limit) || 10;
       const params = { ...(endpoints.params || {}), page: pageParam, limit: limitParam };
