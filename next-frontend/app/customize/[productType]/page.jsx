@@ -12,7 +12,7 @@ const SVG_SUPPORTED = ["polotshirt", "roundneck", "cap"];
 export default function CustomizeProductPage() {
   const searchParams = useSearchParams();
   const params = useParams();
-  const productType = params.productType; // from route e.g. polotshirt
+  const productType = params.productType; 
   const productId = searchParams.get("productId");
 
   const [productData, setProductData] = useState(null);
