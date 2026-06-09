@@ -164,7 +164,6 @@
   }
 }
 
-/* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
   .enquiry-modal {
     max-width: 90%;
