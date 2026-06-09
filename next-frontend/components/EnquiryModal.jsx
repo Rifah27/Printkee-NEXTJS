@@ -78,7 +78,6 @@ const EnquiryModal = ({ isOpen, onClose, image, description }) => {
 
         <div className="modal-container">
 
-          {/* LEFT SECTION */}
           <div className="left-content">
             <img
               src={image || "/assets/t shirt.jpg"}
