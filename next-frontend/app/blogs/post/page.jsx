@@ -259,7 +259,6 @@ export default function BlogPostPage() {
                     <span className="char-count">{title.length}/100</span>
                   </div>
 
-                  {/* Author */}
                   <div className="form-group">
                     <label htmlFor="author" className="form-label">
                       Author Name
