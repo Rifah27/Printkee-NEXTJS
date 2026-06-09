@@ -275,7 +275,6 @@ export default function BlogPostPage() {
                     />
                   </div>
 
-                  {/* Category */}
                   <div className="form-group">
                     <label htmlFor="category" className="form-label">
                       Category
