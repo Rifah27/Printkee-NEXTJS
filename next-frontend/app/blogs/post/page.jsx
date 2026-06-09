@@ -174,7 +174,6 @@ export default function BlogPostPage() {
       <section className="blog-post-editor">
         <div className="container">
           <div className="blog-editor-wrapper">
-            {/* Status Messages */}
             {status && (
               <div className={`editor-status editor-status--${status.type}`}>
                 <div className="status-content">
