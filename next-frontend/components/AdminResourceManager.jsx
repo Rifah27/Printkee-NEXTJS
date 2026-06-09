@@ -104,7 +104,6 @@ export default function AdminResourceManager({
       const rawItems = Array.isArray(res.data) ? res.data : res.data.items || [];
       const nextItems = normalizeFromApi ? rawItems.map(normalizeFromApi) : rawItems;
 
-      // If API returns pagination metadata, use it
       const respTotal = res.data?.totalItems ?? (Array.isArray(res.data) ? rawItems.length : 0);
       const respPages = res.data?.totalPages ?? Math.max(1, Math.ceil(respTotal / limitParam));
 
