@@ -143,7 +143,6 @@ export default function AdminResourceManager({
     loadItems();
   }, [loadItems]);
 
-  // Delay showing the loading overlay to avoid flicker on fast requests
   useEffect(() => {
     let t;
     if (loading) {
