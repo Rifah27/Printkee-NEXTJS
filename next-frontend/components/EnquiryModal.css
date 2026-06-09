@@ -138,8 +138,6 @@
   }
 }
 
-
-/* Tablet (max-width: 1024px) */
 @media (max-width: 1024px) {
   .enquiry-modal {
     max-width: 90%;
