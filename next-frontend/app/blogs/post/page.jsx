@@ -241,7 +241,6 @@ export default function BlogPostPage() {
               <div className="form-section">
                 <h2 className="section-heading">Blog Details</h2>
                 <div className="form-grid">
-                  {/* Title */}
                   <div className="form-group form-group--full">
                     <label htmlFor="title" className="form-label">
                       Blog Title <span className="required">*</span>
