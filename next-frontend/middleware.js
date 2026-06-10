@@ -19,7 +19,6 @@ export function middleware(request) {
       });
     }
   } catch (err) {
-    // If middleware errors, continue to next handler so it doesn't block other routes
     console.error('favicon middleware error', err);
   }
 
