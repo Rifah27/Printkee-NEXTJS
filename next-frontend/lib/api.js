@@ -33,7 +33,6 @@ export const getPublicUrl = (path) => {
   if (value.startsWith("/assets/")) {
     return value;
   }
-  // Build a base URL from NEXT_PUBLIC_API_URL without any trailing `/api`
   const rawApi = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5030/api";
   const apiBase = rawApi.replace(/\/api\/?$/, "");
 
