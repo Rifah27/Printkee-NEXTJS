@@ -1,5 +1,4 @@
 module.exports = {
-  // Main Categories and Pages
   "/": {
     title: "Custom Corporate Gifts with Logo in India | Printkee",
     description: "Printkee offers premium corporate gifts and promotional products with custom branding and logo printing for businesses across India."
