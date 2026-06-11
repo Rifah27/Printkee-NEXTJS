@@ -87,7 +87,6 @@ The `getPublicUrl()` function in `lib/api.js`:
 export function getPublicUrl(imagePath) {
   if (!imagePath) return null;
   
-  // If it's already a full URL, return as-is
   if (imagePath.startsWith('http')) return imagePath;
   
   // If it's an upload path
