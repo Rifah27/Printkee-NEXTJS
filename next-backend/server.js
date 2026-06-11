@@ -7,8 +7,8 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const path = require("path");
 require("dotenv").config();
-const allRoutes = require("./routes/allRoutes");
 
+const allRoutes = require("./routes/allRoutes");
 const blogRoutes = require("./routes/blogRoutes");
 
 const app = express();
@@ -16,11 +16,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// Serve uploaded files (featured images, etc.)
+
+// Serve uploaded files
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.use("/api", allRoutes);
-
 app.use("/api/blogs", blogRoutes);
 app.use("/api/visitors", require("./routes/visitor"));
 app.use("/api", require("./routes/searchRoutes"));
@@ -30,7 +30,11 @@ app.use("/api/category", categoryRoutes);
 app.use("/api/subcategory", subcategoryRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/", require("./routes/sitemap"));
-console.log("Mongo URI:", process.env.MONGO_URI ? "FOUND" : "NOT FOUND");
+
+console.log(
+  "Mongo URI:",
+  process.env.MONGO_URI ? "FOUND" : "NOT FOUND"
+);
 
 mongoose
   .connect(process.env.MONGO_URI)
