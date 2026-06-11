@@ -93,7 +93,6 @@ export function getPublicUrl(imagePath) {
     return `${process.env.NEXT_PUBLIC_API_URL}${imagePath}`;
   }
   
-  // Otherwise, treat as public asset
   return `/assets/${imagePath}`;
 }
 ```
