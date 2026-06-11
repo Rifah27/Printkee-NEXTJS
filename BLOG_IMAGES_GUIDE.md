@@ -99,7 +99,6 @@ export function getPublicUrl(imagePath) {
 
 ### Usage Examples:
 ```javascript
-// Uploaded image
 getPublicUrl("uploads/1754767833512-YYCgKy0MmcY[1]")
 // Returns: https://api.printkee.com/uploads/1754767833512-YYCgKy0MmcY[1]
 
