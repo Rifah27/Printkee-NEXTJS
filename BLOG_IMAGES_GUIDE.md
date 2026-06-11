@@ -89,7 +89,6 @@ export function getPublicUrl(imagePath) {
   
   if (imagePath.startsWith('http')) return imagePath;
   
-  // If it's an upload path
   if (imagePath.includes('/uploads/')) {
     return `${process.env.NEXT_PUBLIC_API_URL}${imagePath}`;
   }
