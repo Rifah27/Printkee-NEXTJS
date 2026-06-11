@@ -240,7 +240,7 @@ Examples:
 {
   title: String,
   content: String,
-  image: String,  // Filename only: "1754767833512-YYCgKy0MmcY[1]"
+  image: String,
   author: String,
   category: String,
   date: Date,
