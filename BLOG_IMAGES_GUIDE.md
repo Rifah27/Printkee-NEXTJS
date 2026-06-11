@@ -183,7 +183,6 @@ for img in *.jpg *.png; do
   convert "$img" -quality 80 "${img%.*}.webp"
 done
 
-# Using cwebp
 cwebp -q 80 input.jpg -o output.webp
 ```
 
