@@ -244,7 +244,6 @@ Examples:
   author: String,
   category: String,
   date: Date,
-  // ... other fields
 }
 ```
 
