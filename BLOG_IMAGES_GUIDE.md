@@ -178,7 +178,6 @@ export default function BlogCard({ blog }) {
 
 ### Batch WebP Conversion:
 ```bash
-# Using ImageMagick
 for img in *.jpg *.png; do
   convert "$img" -quality 80 "${img%.*}.webp"
 done
