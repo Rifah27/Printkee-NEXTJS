@@ -236,7 +236,6 @@ Examples:
 ## Database Schema for Blog Images
 
 ```javascript
-// Blog model
 {
   title: String,
   content: String,
