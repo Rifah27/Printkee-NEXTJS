@@ -124,7 +124,7 @@ The styling includes dark mode support using CSS media queries for user preferen
 const [title, setTitle] = useState("");         
 const [author, setAuthor] = useState("");         
 const [category, setCategory] = useState("");
-const [description, setDescription] = useState("");  // Blog excerpt
+const [description, setDescription] = useState("");  
 const [content, setContent] = useState("");       // Blog content
 const [image, setImage] = useState(null);         // Image file
 const [imagePreview, setImagePreview] = useState(null);  // Preview URL
