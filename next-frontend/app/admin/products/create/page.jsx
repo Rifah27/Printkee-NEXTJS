@@ -59,7 +59,7 @@ export default function AdminProductsCreatePage() {
           update: "/product/update",
           delete: "/product/delete",
           list: "/product/all",
-          params: { page: 1, limit: 10 },
+          params: { page: 1, limit: 10, includeInactive: "true" },
         }}
         fields={productFields}
         normalizeFromApi={resourceNormalizers.productFromApi}

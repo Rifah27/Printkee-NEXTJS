@@ -49,7 +49,7 @@ export default function AdminProductsPage() {
         resourceLabel="Product"
         endpoints={{
           list: "/product/all",
-          params: { page: 1, limit: 100 },
+          params: { page: 1, limit: 100, includeInactive: "true" },
           create: "/product/create",
           update: "/product/update",
           delete: "/product/delete",

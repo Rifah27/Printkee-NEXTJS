@@ -106,7 +106,7 @@ export default function AdminResourceManager({
       const respTotal = res.data?.totalItems ?? (Array.isArray(res.data) ? rawItems.length : 0);
       const respPages = res.data?.totalPages ?? Math.max(1, Math.ceil(respTotal / limitParam));
 
-      setItems(nextItems.length ? nextItems : fallbackItems);
+      setItems(nextItems);
       setTotalItems(respTotal);
       setTotalPages(respPages);
       setMessage(null);
@@ -136,10 +136,6 @@ export default function AdminResourceManager({
     debouncedQuery,
     pageSize,
   ]);
-
-  useEffect(() => {
-    loadItems();
-  }, [loadItems]);
 
   useEffect(() => {
     let t;
@@ -415,7 +411,7 @@ export default function AdminResourceManager({
               placeholder={`Search ${resourceName}s`}
             />
           </div>
-          <span>{totalItems} total • {paginatedItems.length} shown</span>
+          <span>{totalItems} total - {paginatedItems.length} shown</span>
         </div>
       )}
 
