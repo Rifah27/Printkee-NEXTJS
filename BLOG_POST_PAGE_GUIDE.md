@@ -123,7 +123,7 @@ The styling includes dark mode support using CSS media queries for user preferen
 ```javascript
 const [title, setTitle] = useState("");         
 const [author, setAuthor] = useState("");         
-const [category, setCategory] = useState("");     // Blog category
+const [category, setCategory] = useState("");
 const [description, setDescription] = useState("");  // Blog excerpt
 const [content, setContent] = useState("");       // Blog content
 const [image, setImage] = useState(null);         // Image file
