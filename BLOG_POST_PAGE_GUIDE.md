@@ -121,7 +121,7 @@ The styling includes dark mode support using CSS media queries for user preferen
 
 ### State Management
 ```javascript
-const [title, setTitle] = useState("");           // Blog title
+const [title, setTitle] = useState("");         
 const [author, setAuthor] = useState("");         // Author name
 const [category, setCategory] = useState("");     // Blog category
 const [description, setDescription] = useState("");  // Blog excerpt
