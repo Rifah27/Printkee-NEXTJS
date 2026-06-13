@@ -6699,7 +6699,7 @@ body {
   background:
     linear-gradient(135deg, rgba(4, 65, 73, 0.92), rgba(15, 123, 95, 0.82)),
     url("/assets/banner2.webp") center/cover;
-  color: #fff;
+  color: #ffffff;
   padding: clamp(4rem, 8vw, 7rem) 0;
 }
 
