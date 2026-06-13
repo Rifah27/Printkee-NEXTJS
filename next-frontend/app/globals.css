@@ -4426,7 +4426,7 @@ body {
 
 .home-hero__shade {
   background:
-    linear-gradient(90deg, rgba(11, 78, 65, 0.96), rgba(11, 78, 65, 0.75)),
+    linear-gradient(90deg, rgba(11, 78, 65, 0.97), rgba(11, 78, 65, 0.86) 48%, rgba(11, 78, 65, 0.18)),
     linear-gradient(180deg, rgba(8, 28, 25, 0.16), rgba(8, 28, 25, 0.48));
   pointer-events: none;
 }
@@ -5028,7 +5028,8 @@ body {
 
   .home-hero__shade {
     background:
-      linear-gradient(180deg, rgba(11, 78, 65, 0.88), rgba(15, 123, 95, 0.5));
+      linear-gradient(90deg, rgba(11, 78, 65, 0.97), rgba(11, 78, 65, 0.86) 48%, rgba(11, 78, 65, 0.18)),
+      linear-gradient(180deg, rgba(8, 28, 25, 0.16), rgba(8, 28, 25, 0.48));
   }
 
   .home-hero h1 {
@@ -6836,7 +6837,7 @@ body {
 }
 
 .brand-product-card {
-  background: #fff;
+  background: #ffffff;
   border: 1px solid var(--brands-line);
   border-radius: 1rem;
   display: grid;
