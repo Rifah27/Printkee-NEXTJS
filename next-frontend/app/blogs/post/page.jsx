@@ -126,7 +126,7 @@ export default function BlogPostPage() {
     }
 
     if (plainText.split(/\s+/).length < 10) {
-      setStatus({ type: "error", message: "Blog content must be at least 10 words." });
+      setStatus({ type: "error", message: "Blog content must be at least 20 words." });
       setIsSubmitting(false);
       return;
     }
