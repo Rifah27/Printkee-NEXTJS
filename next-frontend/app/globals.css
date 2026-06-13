@@ -6818,7 +6818,7 @@ body {
 }
 
 .brand-detail-overview__stats div span {
-  background: #fff;
+  background: #ffffff;
   border: 1px solid var(--brands-line);
   border-radius: 999px;
   color: var(--brands-ink);
