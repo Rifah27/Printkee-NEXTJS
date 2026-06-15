@@ -156,7 +156,7 @@ export default function BlogPostPage() {
 
   return (
     <main className="blog-post-page">
-      {/* Hero Section */}
+  
       <section className="blog-post-hero">
         <div className="container">
           <Link href="/blogs" className="blog-post-breadcrumb">
