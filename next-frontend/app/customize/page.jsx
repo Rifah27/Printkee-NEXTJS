@@ -123,7 +123,7 @@ export default function CustomizePage() {
             <h2>Customize by product type</h2>
             <p>
               Start with the product family closest to your campaign. You can
-              still mention multiple items in the request form
+              still mention multiple items in the request form.
             </p>
           </div>
 
