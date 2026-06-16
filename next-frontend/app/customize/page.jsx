@@ -66,7 +66,7 @@ const steps = [
   {
     icon: FiTruck,
     title: "Receive your order",
-    copy: "We coordinate production, quality checks, packing, and delivery across India",
+    copy: "We coordinate production, quality checks, packing, and delivery across India.",
   },
 ];
 
