@@ -54,7 +54,6 @@ router.get("/sitemap.xml", async (req, res) => {
       }
     });
 
-    /* ---------- BLOG PAGES ---------- */
 
     blogs.forEach(blog => {
       urls.push(`${base}/blog/${blog._id}`);
