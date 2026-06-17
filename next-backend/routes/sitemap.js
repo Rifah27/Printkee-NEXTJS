@@ -37,7 +37,6 @@ router.get("/sitemap.xml", async (req, res) => {
       urls.push(`${base}/${cat.slug}`);
     });
 
-    /* ---------- SUBCATEGORY PAGES ---------- */
 
     subcategories.forEach(sub => {
       if (sub.category) {
