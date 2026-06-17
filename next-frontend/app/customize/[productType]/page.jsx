@@ -37,7 +37,6 @@ export default function CustomizeProductPage() {
     );
   }
 
-  // Determine props from fetched product or fallback
   let productImages = [];
   let productName = "Custom Product";
   let subcategory = productType;
