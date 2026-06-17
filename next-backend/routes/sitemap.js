@@ -26,8 +26,6 @@ router.get("/sitemap.xml", async (req, res) => {
 
     let urls = [];
 
-    /* ---------- STATIC PAGES ---------- */
-
     urls.push(`${base}/`);
     urls.push(`${base}/about`);
     urls.push(`${base}/brands`);
