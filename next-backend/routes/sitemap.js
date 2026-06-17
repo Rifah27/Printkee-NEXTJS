@@ -32,7 +32,6 @@ router.get("/sitemap.xml", async (req, res) => {
     urls.push(`${base}/contact`);
     urls.push(`${base}/blogs`);
 
-    /* ---------- CATEGORY PAGES ---------- */
 
     categories.forEach(cat => {
       urls.push(`${base}/${cat.slug}`);
