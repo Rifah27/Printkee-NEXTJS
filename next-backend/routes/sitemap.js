@@ -44,7 +44,6 @@ router.get("/sitemap.xml", async (req, res) => {
       }
     });
 
-    /* ---------- PRODUCT PAGES ---------- */
 
     products.forEach(prod => {
       if (prod.category && prod.subcategory) {
