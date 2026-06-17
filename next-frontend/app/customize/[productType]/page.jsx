@@ -48,7 +48,6 @@ export default function CustomizeProductPage() {
       typeof img === "string" ? getPublicUrl(img) : getPublicUrl(img.url)
     );
   } else {
-    // Fallback based on product type if no product ID passed
     const fallbackImageMap = {
       apparel: [
         "/assets/products/formalshirts/1.webp",
