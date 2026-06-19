@@ -104,7 +104,7 @@ export default function AdminDashboardPage() {
           <p>
             The admin sections now cover the same public catalog pillars:
             apparel, eco products, technology, drinkware, bags, office
-            essentials, welcome kits, and event-ready promotional products
+            essentials, welcome kits, and event-ready promotional products.
           </p>
 
           <div className="admin-dashboard-hero__actions">
