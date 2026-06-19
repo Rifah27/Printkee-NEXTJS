@@ -98,7 +98,7 @@ export default function AdminDashboardPage() {
 
           <h2>
             Premium corporate gifting, custom merchandise, and branded products
-            across India
+            across India.
           </h2>
 
           <p>
