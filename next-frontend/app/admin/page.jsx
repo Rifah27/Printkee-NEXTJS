@@ -66,7 +66,7 @@ export default function AdminDashboardPage() {
           <h1>PrintKee admin console</h1>
           <p>
             Manage the full PrintKee catalog, update product listings, categories,
-            subcategories, and campaign banners from one minimal dashboard.
+            subcategories, and campaign banners from one minimal dashboard
           </p>
         </div>
 
