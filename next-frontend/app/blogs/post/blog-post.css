@@ -467,7 +467,6 @@
   }
 }
 
-/* Mobile (≤ 768px) */
 @media (max-width: 768px) {
   .blog-post-hero {
     padding: 40px 16px 25px;
