@@ -17,7 +17,7 @@ export default function DiwaliPage() {
           </div>
           <div className="card p-8">
             <p className="text-3xl font-semibold text-slate-900">Fast delivery</p>
-            <p className="mt-3 text-sm leading-6 text-slate-600">Align with campaign timelines using the same backend stock and order inquiries</p>
+            <p className="mt-3 text-sm leading-6 text-slate-600">Align with campaign timelines using the same backend stock and order inquiries.</p>
           </div>
         </div>
       </div>
