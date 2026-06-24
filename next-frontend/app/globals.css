@@ -6190,7 +6190,7 @@ body {
 
 .related-product-grid p {
   color: var(--catalog-muted);
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   font-weight: 800;
   margin: 0;
 }
@@ -6225,7 +6225,7 @@ body {
 @media (max-width: 640px) {
   .catalog-hero,
   .catalog-hero__inner {
-    min-height: 42rem;
+    min-height: 40rem;
   }
 
   .catalog-hero__shade {
@@ -6981,5 +6981,376 @@ body {
   .brand-detail-grid,
   .sitemap-page__grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile polish: keep the existing design, but make every page breathe on small screens. */
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+main {
+  min-width: 0;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+.site-header,
+.site-footer,
+.home-page,
+.page-shell,
+.catalog-page,
+.brands-page,
+.brand-detail-page,
+.customize-page,
+.contact-page,
+.about-page,
+.blog-page,
+.sitemap-page {
+  overflow-x: clip;
+}
+
+@media (max-width: 860px) {
+  section,
+  .page-section,
+  .brands-section,
+  .catalog-section,
+  .home-section {
+    padding-top: clamp(2.25rem, 8vw, 3.5rem);
+    padding-bottom: clamp(2.25rem, 8vw, 3.5rem);
+  }
+
+  .container {
+    width: 100%;
+    padding-left: clamp(1rem, 4.5vw, 1.5rem);
+    padding-right: clamp(1rem, 4.5vw, 1.5rem);
+  }
+
+  .site-header__notice {
+    display: none;
+  }
+
+  .site-header__main-inner {
+    min-height: 4.25rem;
+  }
+
+  .site-mobile-panel {
+    max-height: calc(100dvh - 4.25rem);
+    overflow-y: auto;
+    padding: 1rem clamp(1rem, 4.5vw, 1.5rem) 1.25rem;
+  }
+
+  .site-mobile-panel__links a,
+  .site-mobile-panel__categories a {
+    border-radius: 0.45rem;
+    padding: 0.8rem 0.9rem;
+  }
+
+  .site-search--mobile {
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    min-height: 3rem;
+  }
+
+  .site-footer__cta-inner,
+  .site-footer__grid,
+  .site-footer__bottom {
+    gap: 1.35rem;
+  }
+
+  .site-footer__cta a,
+  .site-quote-btn {
+    justify-content: center;
+  }
+
+  .page-hero__inner,
+  .customize-hero__inner,
+  .brands-hero__inner,
+  .brand-detail-hero__inner,
+  .catalog-hero__inner,
+  .product-hero__grid,
+  .contact-hero__inner,
+  .about-intro,
+  .brands-logo-band__inner,
+  .brands-industries,
+  .brands-cta__inner,
+  .brand-detail-overview__inner,
+  .product-info-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .page-hero__inner,
+  .customize-hero__inner,
+  .brands-hero__inner,
+  .catalog-hero__inner,
+  .home-hero__inner {
+    min-height: auto;
+  }
+
+  .page-hero__image-stack img,
+  .about-feature-grid img,
+  .about-trust img,
+  .brand-detail-logo,
+  .catalog-hero__panel,
+  .home-hero__panel {
+    max-width: 100%;
+  }
+
+  .catalog-category-grid,
+  .catalog-product-grid,
+  .catalog-feature-grid,
+  .related-product-grid,
+  .brand-product-grid,
+  .brands-proof-grid,
+  .brands-testimonial-grid,
+  .product-spec-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 0.96rem;
+    line-height: 1.55;
+  }
+
+  .site-logo__mark {
+    height: 3.2rem;
+    width: 2.35rem;
+  }
+
+  .site-logo__mark img {
+    height: 3.2rem;
+  }
+
+  .site-logo b {
+    font-size: 1.22rem;
+  }
+
+  .site-menu-btn {
+    height: 2.6rem;
+    width: 2.6rem;
+  }
+
+  .site-search button,
+  .site-quote-btn,
+  .home-btn,
+  .page-btn,
+  .brands-btn,
+  .catalog-btn,
+  .customize-btn {
+    min-height: 2.85rem;
+    padding: 0.78rem 1rem;
+  }
+
+  .home-hero {
+    min-height: auto;
+  }
+
+  .home-hero__inner {
+    align-content: start;
+    gap: 1.35rem;
+    min-height: auto;
+    padding-bottom: 4.25rem;
+    padding-top: 3rem;
+  }
+
+  .home-hero__shade {
+    background:
+      linear-gradient(180deg, rgba(8, 28, 25, 0.88), rgba(11, 78, 65, 0.84)),
+      linear-gradient(90deg, rgba(11, 78, 65, 0.76), rgba(11, 78, 65, 0.22));
+  }
+
+  .home-hero h1,
+  .page-hero h1,
+  .contact-hero h1,
+  .blog-hero h1,
+  .customize-hero__copy h1,
+  .customize-detail-hero h1,
+  .catalog-hero__copy h1,
+  .brands-hero__copy h1,
+  .brand-detail-hero__copy h1,
+  .sitemap-page__head h1 {
+    font-size: clamp(2rem, 10vw, 3rem) !important;
+    line-height: 1.06 !important;
+    max-width: 100%;
+  }
+
+  .home-section__head h2,
+  .home-proof h2,
+  .home-process h2,
+  .home-faq-layout h2,
+  .home-cta h2,
+  .brands-section__head h2,
+  .brands-industries h2,
+  .brands-cta h2,
+  .catalog-section__head h2,
+  .catalog-cta h2,
+  .product-copy-panel h2 {
+    font-size: clamp(1.55rem, 7.5vw, 2.25rem) !important;
+    line-height: 1.12 !important;
+  }
+
+  .home-hero__copy > p:last-of-type,
+  .home-section__head p:not(.home-kicker),
+  .home-faq-layout > div > p,
+  .home-cta p,
+  .page-hero p:not(.page-kicker),
+  .contact-hero p:not(.page-kicker),
+  .blog-hero p,
+  .brands-hero__copy > p,
+  .brands-section__head > p,
+  .catalog-hero__copy > p,
+  .product-hero__copy > p {
+    font-size: 0.98rem;
+    line-height: 1.62;
+  }
+
+  .home-hero__panel {
+    align-self: stretch;
+    padding: 1rem;
+  }
+
+  .home-hero__panel strong {
+    font-size: 1.25rem;
+  }
+
+  .home-hero__mini-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .home-hero__mini-grid div {
+    padding: 0.7rem 0.55rem;
+  }
+
+  .home-hero__dots {
+    bottom: 1.5rem;
+    left: clamp(1rem, 4.5vw, 1.5rem);
+  }
+
+  .home-category-grid,
+  .home-occasion-grid,
+  .home-service-grid,
+  .home-proof__grid,
+  .home-customize-grid,
+  .home-industry-grid,
+  .home-process__steps,
+  .catalog-category-grid,
+  .catalog-product-grid,
+  .catalog-feature-grid,
+  .related-product-grid,
+  .brand-product-grid,
+  .brands-proof-grid,
+  .brands-logo-band__inner > div,
+  .brands-industry-list,
+  .brands-testimonial-grid,
+  .product-spec-grid,
+  .brand-detail-grid,
+  .sitemap-page__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .home-category-card {
+    grid-template-rows: auto 1fr auto;
+    padding: 0.65rem;
+  }
+
+  .home-category-card img,
+  .product-card__media,
+  .brand-product-card img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .home-occasion-card div,
+  .home-service-card,
+  .home-customize-card,
+  .home-proof__grid article,
+  .product-copy-panel,
+  .product-summary-panel,
+  .brand-detail-grid article,
+  .brands-proof-grid article,
+  .brands-testimonial-grid article {
+    padding: 1rem;
+  }
+
+  .home-brand-row {
+    align-items: center;
+    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-brand-row span {
+    grid-column: 1 / -1;
+  }
+
+  .home-brand-row img {
+    justify-self: start;
+    max-height: 2.4rem;
+  }
+
+  .home-cta__inner,
+  .brands-cta__inner {
+    border-radius: 0.5rem;
+    padding: 1.15rem;
+  }
+
+  .home-faq button {
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding: 1rem;
+  }
+
+  .home-faq button svg {
+    flex: 0 0 auto;
+    margin-top: 0.15rem;
+  }
+
+  .site-footer__cta h2 {
+    font-size: clamp(1.45rem, 7vw, 2.15rem) !important;
+    line-height: 1.12 !important;
+  }
+
+  .site-footer__cta a,
+  .site-footer__bottom,
+  .site-footer__badges,
+  .home-hero__actions,
+  .home-hero__actions .home-btn,
+  .home-customize__cta .home-btn,
+  .home-cta .home-btn,
+  .brands-hero__actions,
+  .brands-hero__actions .brands-btn,
+  .brands-cta .brands-btn,
+  .catalog-actions,
+  .catalog-actions .catalog-btn,
+  .catalog-cta .catalog-btn {
+    width: 100%;
+  }
+
+  .product-hero__details {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .home-hero__mini-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .site-logo b {
+    font-size: 1.08rem;
   }
 }

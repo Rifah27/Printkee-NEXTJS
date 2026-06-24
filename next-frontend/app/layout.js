@@ -7,6 +7,11 @@ export const metadata = {
     "Custom promotional products, corporate gifting, branded merchandise, and bulk order support across India.",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
