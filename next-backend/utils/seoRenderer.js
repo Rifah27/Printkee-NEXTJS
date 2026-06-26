@@ -24,7 +24,6 @@ function renderSEO({ title, description, canonical, seoContent }) {
     }
   }
 
-  // 2. Replace Description
   if (description) {
     if (html.includes("__DESCRIPTION__")) {
       html = html.split("__DESCRIPTION__").join(description);
