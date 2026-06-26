@@ -16,7 +16,6 @@ function renderSEO({ title, description, canonical, seoContent }) {
 
   let html = fs.readFileSync(indexPath, "utf8");
 
-  // 1. Replace Title
   if (title) {
     if (html.includes("__TITLE__")) {
       html = html.split("__TITLE__").join(title);
