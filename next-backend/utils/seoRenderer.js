@@ -44,7 +44,6 @@ function renderSEO({ title, description, canonical, seoContent }) {
     }
   }
 
-  // 4. Replace SEO Content
   if (html.includes("__SEO_CONTENT__")) {
     html = html.split("__SEO_CONTENT__").join(seoContent || "");
   }
