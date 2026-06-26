@@ -34,7 +34,6 @@ function renderSEO({ title, description, canonical, seoContent }) {
     }
   }
 
-  // 3. Replace Canonical
   if (canonical) {
     if (html.includes("__CANONICAL__")) {
       html = html.split("__CANONICAL__").join(canonical);
