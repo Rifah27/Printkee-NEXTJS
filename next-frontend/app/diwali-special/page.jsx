@@ -13,7 +13,7 @@ export default function DiwaliPage() {
         <div className="grid gap-6 sm:grid-cols-2">
           <div className="card p-8">
             <p className="text-3xl font-semibold text-slate-900">Custom gifts</p>
-            <p className="mt-3 text-sm leading-6 text-slate-600">Branded drinkware, apparel, and office gifts ready for your Diwali collection.</p>
+            <p className="mt-3 text-sm leading-6 text-slate-600">Branded drinkware, apparel, and office gifts ready for your Diwali collection</p>
           </div>
           <div className="card p-8">
             <p className="text-3xl font-semibold text-slate-900">Fast delivery</p>
