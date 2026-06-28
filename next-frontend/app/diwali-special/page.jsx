@@ -8,7 +8,7 @@ export default function DiwaliPage() {
           <p className="text-sm uppercase tracking-[0.22em] text-brand-600">Diwali Special</p>
           <h1 className="mt-4 text-4xl font-semibold text-slate-900">Festival-ready branding that delivers impact.</h1>
           <p className="mt-6 text-lg leading-8 text-slate-600">Launch your seasonal campaigns with premium prints, gift sets, and limited-edition merchandise through a refined storefront experience.</p>
-          <Link href="/contact" className="mt-8 inline-flex rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-700">Request a festival quote</Link>
+          <Link href="/contact" className="mt-8 inline-flex rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-700">Request a festival quote.</Link>
         </div>
         <div className="grid gap-6 sm:grid-cols-2">
           <div className="card p-8">
