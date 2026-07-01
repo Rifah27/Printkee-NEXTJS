@@ -69,7 +69,7 @@ export default function LoginPage() {
           <h1>Manage corporate gifting content with confidence.</h1>
           <p>
             Sign in to update product ranges, category records, custom gifting
-            content, and catalog information used across the PrintKee Next app
+            content, and catalog information used across the PrintKee Next app.
           </p>
 
           <div className="auth-highlight-grid">
