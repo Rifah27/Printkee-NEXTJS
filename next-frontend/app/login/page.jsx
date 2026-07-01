@@ -95,7 +95,7 @@ export default function LoginPage() {
           <p className="auth-kicker">Secure sign in</p>
           <h2>Access dashboard</h2>
           <p className="auth-card__copy">
-            Use your PrintKee administrator credentials to continue
+            Use your PrintKee administrator credentials to continue.
           </p>
 
           {error && <p className="auth-alert auth-alert--error">{error}</p>}
