@@ -37,7 +37,7 @@ export default function SitemapPage() {
         <div className="sitemap-page__head">
           <p className="catalog-kicker">PrintKee routes</p>
           <h1>Sitemap</h1>
-          <p>Explore all key pages and collections on PrintKee.</p>
+          <p>Explore all key pages and collections on PrintKee</p>
         </div>
 
         <div className="sitemap-page__grid">
