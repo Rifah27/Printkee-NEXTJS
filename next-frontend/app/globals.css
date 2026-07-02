@@ -7316,7 +7316,7 @@ canvas {
 
   .site-footer__cta h2 {
     font-size: clamp(1.45rem, 7vw, 2.15rem) !important;
-    line-height: 1.10 !important;
+    line-height: 1.12 !important;
   }
 
   .site-footer__cta a,
