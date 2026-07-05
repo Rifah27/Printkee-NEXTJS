@@ -7260,7 +7260,7 @@ canvas {
 
   .home-category-card {
     grid-template-rows: auto 1fr auto;
-    padding: 0.65rem;
+    padding: 0.60rem;
   }
 
   .home-category-card img,
