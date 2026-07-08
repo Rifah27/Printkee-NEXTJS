@@ -7057,7 +7057,7 @@ canvas {
     align-items: center;
     display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto;
-    min-height: 2rem;
+    min-height: 1rem;
   }
 
   .site-footer__cta-inner,
