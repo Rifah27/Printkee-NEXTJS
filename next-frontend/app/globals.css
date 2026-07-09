@@ -6984,7 +6984,6 @@ body {
   }
 }
 
-/* Mobile polish: keep the existing design, but make every page breathe on small screens. */
 html,
 body {
   max-width: 100%;
