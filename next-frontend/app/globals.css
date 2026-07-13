@@ -6742,7 +6742,7 @@ body {
   background: rgba(255, 255, 255, 0.96);
   border-radius: 0.75rem;
   display: flex;
-  min-height: 18rem;
+  min-height: 15rem;
   padding: clamp(2rem, 5vw, 4rem);
 }
 
