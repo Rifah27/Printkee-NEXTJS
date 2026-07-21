@@ -16,4 +16,4 @@ Allow: /blog/
 Allow: /blogs/
 
 # Sitemap
-Sitemap: https://printkee.com/sitemap.xml
+Sitemap: https://vorixa.com/sitemap.xml

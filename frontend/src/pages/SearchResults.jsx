@@ -42,7 +42,7 @@ const SearchResults = () => {
     if (query) fetchResults();
   }, [query, category]);
 
-  const canonicalUrl = `https://printkee.com/search?q=${encodeURIComponent(
+  const canonicalUrl = `https://vorixa.com/search?q=${encodeURIComponent(
     query || ""
   )}&cat=${encodeURIComponent(category || "")}`;
 
@@ -71,7 +71,7 @@ const SearchResults = () => {
 
           <meta
             name="keywords"
-            content="search corporate gifts, branded gifts, corporate gifting India, Printkee search results"
+            content="search corporate gifts, branded gifts, corporate gifting India, Vorixa search results"
           />
 
           <link rel="canonical" href={canonicalUrl} />

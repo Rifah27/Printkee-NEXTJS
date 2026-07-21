@@ -14,7 +14,7 @@ const Sidebar = () => {
       <div className="admin-sidebar-header">
         <NavLink to="/" end style={{ display: "inline-block" }}>
           <img
-            src="/assets/printkeeLogo.webp"
+            src="/assets/vorixaLogo.png"
             alt="Logo"
             className="admin-sidebar-logo"
             style={{

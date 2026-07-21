@@ -30,7 +30,7 @@ const CategorySlider = () => {
       </h2>
 
       <p className="category-slider-subheading">
-        Discover the best range of customized promotional products with PrintKee —
+        Discover the best range of customized promotional products with Vorixa —
         your trusted Promotional Items Manufacturer. From stylish personalized
         apparel to eco-friendly gifts, we create impactful marketing giveaways
         that leave a lasting impression.

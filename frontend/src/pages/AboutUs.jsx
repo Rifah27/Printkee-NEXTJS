@@ -11,18 +11,18 @@ const AboutUs = () => {
           name="description"
           content="Learn about MF Global Services – your trusted partner for premium corporate gifting solutions. Discover our mission, values, and why top brands choose us for personalized gifts."
         />
-        <link rel="canonical" href="https://printkee.com/about" />
+        <link rel="canonical" href="https://vorixa.com/about" />
       </Helmet>
 
       <section className="aboutus-hero">
         <div className="aboutus-text">
-          <h1>About Printkee</h1>
+          <h1>About Vorixa</h1>
           <p>
-           Printkee is your trusted destination for custom corporate gifting and
+           Vorixa is your trusted destination for custom corporate gifting and
 promotional merchandise, designed to help brands stand out and leave a
 lasting impression. We specialize in high-quality, customized products that
 align perfectly with your brand identity and business goals.
-With a strong focus on creativity, quality, and reliability, Printkee works with
+With a strong focus on creativity, quality, and reliability, Vorixa works with
 corporates, startups, educational institutions, and event organizers to
 deliver end-to-end branding solutions. From product selection and
 customization to production and on-time delivery, we ensure a smooth and
@@ -31,12 +31,12 @@ Our extensive product range includes custom apparel, bags, drinkware,
 eco-friendly products, office and writing essentials, technology accessories,
 trophies, and curated welcome kits. Whether it’s employee onboarding,
 corporate events, client gifting, promotional campaigns, or brand
-activations, Printkee provides solutions that make an impact.
-At Printkee, we believe corporate gifting is more than just a product—it’s a
+activations, Vorixa provides solutions that make an impact.
+At Vorixa, we believe corporate gifting is more than just a product—it’s a
 powerful branding tool. Our commitment to premium quality, attention to
 detail, and customer satisfaction has made us a preferred partner for
 businesses across India.
-Let Printkee help you transform your brand ideas into memorable,
+Let Vorixa help you transform your brand ideas into memorable,
 customized experiences.
           </p>
         </div>

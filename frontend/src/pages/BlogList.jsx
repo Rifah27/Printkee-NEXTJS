@@ -24,7 +24,7 @@ const BlogList = () => {
         />
 
       
-        <link rel="canonical" href="https://printkee.com/blogs" />
+        <link rel="canonical" href="https://vorixa.com/blogs" />
       </Helmet>
 
       <div className="blog-header">

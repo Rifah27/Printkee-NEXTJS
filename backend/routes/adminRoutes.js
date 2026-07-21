@@ -14,7 +14,7 @@ router.post("/login", (req, res) => {
 
   const { email, password } = req.body;
 
-  if (email === "admin@printkee.com" && password === "mfprintkee") {
+  if (email === "admin@vorixa.com" && password === "mfvorixa") {
     if (!SECRET_KEY) {
       console.error("❌ JWT_SECRET is undefined!");
       return res.status(500).json({ message: "Server misconfiguration" });

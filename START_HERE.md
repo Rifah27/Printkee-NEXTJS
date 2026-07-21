@@ -103,7 +103,7 @@ Check `/blogs` to see your blog in the list
 ## 📂 File Structure
 
 ```
-Printkee/
+Vorixa/
 ├── next-app/app/blogs/post/
 │   ├── page.jsx              ✅ Main component
 │   └── blog-post.css         ✅ Styling

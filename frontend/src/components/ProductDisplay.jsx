@@ -36,7 +36,7 @@ const ProductDisplay = () => {
   const categoryName = categoryData.name;
   const subcategoryName = subcategoryData.name;
 
-  const canonicalUrl = `https://printkee.com/${categorySlug}/${subcategorySlug}`;
+  const canonicalUrl = `https://vorixa.com/${categorySlug}/${subcategorySlug}`;
 
   const bannerImage =
     banners[categorySlug]?.subcategories?.[subcategorySlug] ||

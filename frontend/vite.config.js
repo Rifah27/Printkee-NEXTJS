@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
     plugins: [react()],
     server: {
       proxy: {
-        '/sitemap.xml': env.VITE_IMG_URL || 'https://printkee.com',
+        '/sitemap.xml': env.VITE_IMG_URL || 'https://vorixa.com',
       }
     }
   }

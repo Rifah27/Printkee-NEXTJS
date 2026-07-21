@@ -94,7 +94,7 @@ The form validates:
 ## 🎨 Design Highlights
 
 ### Color Scheme
-- **Primary Purple**: #4b2061 (PrintKee brand)
+- **Primary Purple**: #4b2061 (Vorixa brand)
 - **Accent Orange**: #f39c12 (Call-to-action)
 - **Neutral Grays**: Various shades for hierarchy
 
@@ -488,7 +488,7 @@ The implementation is optimized for performance, security, and user experience, 
 
 ## 📄 License
 
-Part of PrintKee Next.js Application
+Part of Vorixa Next.js Application
 All rights reserved
 
 ---

@@ -8,7 +8,7 @@ const testimonials = [
     position: "HR Manager",
     company: "TechNova Pvt Ltd",
     review:
-      "Printkee made our festive gifting process effortless and stylish. Great support and timely delivery!",
+      "Vorixa made our festive gifting process effortless and stylish. Great support and timely delivery!",
     logo: "/logos/technova.webp",
   },
   {
@@ -45,7 +45,7 @@ const Testimonials = () => {
       </h2>
 
       <p className="section-subtitle-2">
-        Hear from our happy clients about their experience with Printkee.
+        Hear from our happy clients about their experience with Vorixa.
       </p>
 
       <div className="testimonials-container">

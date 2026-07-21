@@ -6,7 +6,7 @@ import '../styles/CTABanner.css';
 const CTABanner = ({
   imageSrc,
   linkTo = '/contact',
-  alt = 'Get a Quote – Corporate Gifting with PrintKee',
+  alt = 'Get a Quote – Corporate Gifting with Vorixa',
 }) => {
   return (
     <div

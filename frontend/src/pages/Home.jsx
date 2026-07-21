@@ -32,7 +32,7 @@ const Home = () => {
         />
 
         {/* Canonical URL */}
-        <link rel="canonical" href="https://printkee.com" />
+        <link rel="canonical" href="https://vorixa.com" />
       </Helmet>
 
       {/* Page Content */}

@@ -67,7 +67,7 @@ const productData = [
       "Premium trophies, medals, and plaques designed to reflect prestige."
     ],
     footer:
-      "From appreciation tokens to luxury awards, PrintKee ensures your gifts leave a lasting impression."
+      "From appreciation tokens to luxury awards, Vorixa ensures your gifts leave a lasting impression."
   },
 ];
 

@@ -5,12 +5,12 @@ const Product = require("../models/product");
 const Subcategory = require("../models/Subcategory");
 
 const createToken = (email) =>
-  Buffer.from(`${email}:${Date.now()}:printkee-admin`).toString("base64url");
+  Buffer.from(`${email}:${Date.now()}:vorixa-admin`).toString("base64url");
 
 router.post("/login", (req, res) => {
   const { email, password } = req.body;
 
-  if (email === "admin@printkee.com" && password === "mfprintkee") {
+  if (email === "admin@vorixa.com" && password === "mfvorixa") {
     return res.json({
       token: createToken(email),
       user: { email },

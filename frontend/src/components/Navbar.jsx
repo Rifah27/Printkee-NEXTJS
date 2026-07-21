@@ -55,8 +55,8 @@ const Navbar = () => {
         <div className="navbar-logo">
           <img
             className="navbar-logo-img"
-            src="/assets/printkeeLogo.webp"
-            alt="Printkee Corporate Gifting Logo"
+            src="/assets/vorixaLogo.png"
+            alt="Vorixa Corporate Gifting Logo"
           />
         </div>
 
@@ -200,7 +200,7 @@ const Navbar = () => {
 
         <div className="navbar-contact">
           Contact with Us: <br />
-          <a href="mailto:sales@printkee.com">sales@printkee.com</a>
+          <a href="mailto:sales@vorixa.com">sales@vorixa.com</a>
         </div>
       </nav>
 
@@ -211,7 +211,7 @@ const Navbar = () => {
         aria-label="Mobile menu"
       >
         <div className="side-menu-header">
-          <img src="/assets/printkeeLogo.webp" alt="Printkee Logo" className="side-logo" />
+          <img src="/assets/vorixaLogo.png" alt="Vorixa Logo" className="side-logo" />
 
           <button
             className="close-btn-side"

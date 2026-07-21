@@ -9,7 +9,7 @@ const Blog = require("../models/Blog");
 router.get("/sitemap.xml", async (req, res) => {
   try {
 
-    const base = "https://printkee.com";
+    const base = "https://vorixa.com";
 
     const categories = await Category.find().lean();
 

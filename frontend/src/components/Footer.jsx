@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Footer.css";
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaPhoneAlt } from "react-icons/fa";
-import logo from "/assets/printkeeLogo.webp";
+import logo from "/assets/vorixaLogo.png";
 
 const Footer = () => {
   return (
@@ -17,7 +17,7 @@ const Footer = () => {
           />
 
           <p className="footer-description">
-            Printkee is your trusted partner in corporate gifting.
+            Vorixa is your trusted partner in corporate gifting.
             We provide end-to-end customized gifting solutions that help brands
             create meaningful connections — with premium packaging, high-quality
             products, and timely delivery.
@@ -26,9 +26,9 @@ const Footer = () => {
           <a
             href="/about"
             className="footer-about-btn"
-            aria-label="Read more about Printkee"
+            aria-label="Read more about Vorixa"
           >
-            Read More <span className="sr-only"> about Printkee</span>
+            Read More <span className="sr-only"> about Vorixa</span>
           </a>
         </div>
 
@@ -72,7 +72,7 @@ const Footer = () => {
             </a>
 
             <a
-              href="https://www.instagram.com/printkee?igsh=MThmZDVhamJ1dGp6Mw=="
+              href="https://www.instagram.com/vorixa?igsh=MThmZDVhamJ1dGp6Mw=="
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit our Instagram profile"
@@ -94,11 +94,11 @@ const Footer = () => {
 
       {/* Footer Bottom Bar */}
       <div className="footer-bottom">
-        <a href="tel:8750708222" className="footer-phone-link" aria-label="Call Printkee at 8750708222">
+        <a href="tel:8750708222" className="footer-phone-link" aria-label="Call Vorixa at 8750708222">
           <FaPhoneAlt aria-hidden="true" /> 87507 08222
         </a>
         <span className="footer-divider">|</span>
-        &copy; {new Date().getFullYear()} Printkee. All rights reserved.
+        &copy; {new Date().getFullYear()} Vorixa. All rights reserved.
       </div>
     </footer>
   );

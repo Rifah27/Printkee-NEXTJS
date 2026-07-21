@@ -1,7 +1,7 @@
 const subcategoryDescriptions = {
 
 "polo-t-shirts": `
-<h3>Customised printing T-Shirts by printkee</h3>
+<h3>Customised printing T-Shirts by vorixa</h3>
 
 <p>
 Custom-Branding Polo T-Shirts for Corporate and Promotional Use

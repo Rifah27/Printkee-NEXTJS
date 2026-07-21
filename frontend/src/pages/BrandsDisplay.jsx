@@ -74,7 +74,7 @@ const BrandsDisplay = () => {
     }
   };
 
-  const canonicalUrl = `https://printkee.com/brands/${brand}`;
+  const canonicalUrl = `https://vorixa.com/brands/${brand}`;
 
   return (
     <div className="brand-display-page">

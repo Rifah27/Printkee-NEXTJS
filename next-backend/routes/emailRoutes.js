@@ -8,14 +8,14 @@ router.post("/send-email", async (req, res) => {
   const { name, company, email, phone,  requirement } = req.body;
   try {
     const response = await resend.emails.send({
-      from: "no-reply@printkee.com",
-      to: "sales@printkee.com",
+      from: "no-reply@vorixa.com",
+      to: "sales@vorixa.com",
       reply_to: email,
-      subject: "New Enquiry from Printkee",
+      subject: "New Enquiry from Vorixa",
       text: `
         Hi Team,
 
-        You have received a new inquiry through Printkee.com. Please find the details below:
+        You have received a new inquiry through Vorixa.com. Please find the details below:
 
         Name: ${name}
         Company: ${company}
@@ -26,7 +26,7 @@ router.post("/send-email", async (req, res) => {
         Please reach out to the user as soon as possible.
 
         Best regards,
-        Printkee
+        Vorixa
       `,
     });
     res.status(200).json({ success: true, message: "Email sent successfully!", response });

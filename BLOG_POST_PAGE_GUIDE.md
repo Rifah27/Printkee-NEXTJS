@@ -101,7 +101,7 @@ The form validates:
 ## Styling Features
 
 ### Design Elements
-- **Color Scheme**: Purple (#4b2061) and Orange (#f39c12) from Printkee brand
+- **Color Scheme**: Purple (#4b2061) and Orange (#f39c12) from Vorixa brand
 - **Responsive Layout**: Fully responsive from mobile (320px) to desktop (1440px+)
 - **Hero Section**: Gradient background with breadcrumb navigation
 - **Form Layout**: Clean, organized sections with clear visual hierarchy

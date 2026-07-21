@@ -15,7 +15,7 @@ const SubcategoryDisplay = () => {
   const { category: categorySlug } = useParams();
   const [categoryData, setCategoryData] = useState(null);
 
-  const canonicalUrl = `https://printkee.com/${categorySlug}`;
+  const canonicalUrl = `https://vorixa.com/${categorySlug}`;
 
   useEffect(() => {
     axios

@@ -5,7 +5,7 @@ async function testDatabase() {
   let report = "# Database Test Results\n\n";
   const mongoose = require('mongoose');
   try {
-    await mongoose.connect('mongodb+srv://sana38790:sana38790@cluster0.kpqx7.mongodb.net/printkee-db?retryWrites=true&w=majority&appName=Cluster0');
+    await mongoose.connect('mongodb+srv://sana38790:sana38790@cluster0.kpqx7.mongodb.net/vorixa-db?retryWrites=true&w=majority&appName=Cluster0');
     report += "✅ MongoDB connection successful.\n";
     
     // Check collections
@@ -23,7 +23,7 @@ async function testDatabase() {
     mongoose.connection.close();
   }
   
-  fs.writeFileSync('C:\\Users\\Admin\\Desktop\\Sana\\P-NEXTJS\\Printkee-NEXTJS\\migration-audit\\DATABASE_TEST_RESULTS.md', report);
+  fs.writeFileSync('C:\\Users\\Admin\\Desktop\\Sana\\P-NEXTJS\\Vorixa-NEXTJS\\migration-audit\\DATABASE_TEST_RESULTS.md', report);
 }
 
 async function testAPIs() {
@@ -49,7 +49,7 @@ async function testAPIs() {
     }
   }
 
-  fs.writeFileSync('C:\\Users\\Admin\\Desktop\\Sana\\P-NEXTJS\\Printkee-NEXTJS\\migration-audit\\API_TEST_RESULTS.md', report);
+  fs.writeFileSync('C:\\Users\\Admin\\Desktop\\Sana\\P-NEXTJS\\Vorixa-NEXTJS\\migration-audit\\API_TEST_RESULTS.md', report);
 }
 
 async function run() {

@@ -1,7 +1,7 @@
 # Blog Images Setup Guide
 
 ## Overview
-This guide explains how blog images are handled, displayed, and optimized in the PrintKee Next.js application.
+This guide explains how blog images are handled, displayed, and optimized in the Vorixa Next.js application.
 
 ## Blog Image Locations
 
@@ -100,7 +100,7 @@ export function getPublicUrl(imagePath) {
 ### Usage Examples:
 ```javascript
 getPublicUrl("uploads/1754767833512-YYCgKy0MmcY[1]")
-// Returns: https://api.printkee.com/uploads/1754767833512-YYCgKy0MmcY[1]
+// Returns: https://api.vorixa.com/uploads/1754767833512-YYCgKy0MmcY[1]
 
 // Asset image
 getPublicUrl("banner-sect2.webp")

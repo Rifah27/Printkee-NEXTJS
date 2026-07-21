@@ -35,7 +35,7 @@ const BlogView = () => {
 
   if (!blog) return <div className="blog-view-loading">Loading blog post...</div>;
 
-  const canonicalUrl = `https://printkee.com/blog/${id}`;
+  const canonicalUrl = `https://vorixa.com/blog/${id}`;
 
   // JSON-LD Structured Data
   const structuredData = {

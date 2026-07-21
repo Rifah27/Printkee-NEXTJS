@@ -49,7 +49,7 @@ const ShopByOccasion = () => (
 
     <p className="occasion-sub">
       Discover a wide range of corporate gifting solutions in Delhi NCR, Noida,
-      Gurgaon, and across India. At PrintKee, we specialize in curated branded
+      Gurgaon, and across India. At Vorixa, we specialize in curated branded
       gifts, employee welcome kits, festive hampers, client thank you presents,
       and promotional giveaways that help your business build strong connections
       and lasting impressions.
@@ -65,7 +65,7 @@ const ShopByOccasion = () => (
           <div className="image-box">
             <img
               src={image}
-              alt={`${title} – Corporate Gifting by PrintKee`}
+              alt={`${title} – Corporate Gifting by Vorixa`}
               className="occasion-img"
             />
           </div>

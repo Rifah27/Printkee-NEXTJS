@@ -14,7 +14,7 @@ const Brands = () => {
         />
 
         
-        <link rel="canonical" href="https://printkee.com/brands" />
+        <link rel="canonical" href="https://vorixa.com/brands" />
       </Helmet>
 
       <h1 className="brands-heading">Brands We Offer</h1>

@@ -63,7 +63,7 @@ const GetQuoteCTA = () => {
               <span>Call us at </span>
               <a
                 href="tel:+918750708222"
-                aria-label="Call PrintKee at 8750708222"
+                aria-label="Call Vorixa at 8750708222"
               >
                 +91 8750708222
               </a>

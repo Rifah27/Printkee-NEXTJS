@@ -1248,7 +1248,7 @@ section {
   }
 }
 
-/* PrintKee content pages refresh */
+/* Vorixa content pages refresh */
 .pk-page {
   --pk-ink: #17211f;
   --pk-muted: #64706c;
@@ -1738,8 +1738,8 @@ section {
   }
 }
 
-/* Recreated PrintKee pages */
-.printkee-page {
+/* Recreated Vorixa pages */
+.vorixa-page {
   --pp-ink: #17211f;
   --pp-muted: #65736f;
   --pp-line: #dfe8e2;
@@ -1753,15 +1753,15 @@ section {
   color: var(--pp-ink);
 }
 
-.printkee-page img {
+.vorixa-page img {
   display: block;
   max-width: 100%;
 }
 
-.printkee-page h1,
-.printkee-page h2,
-.printkee-page h3,
-.printkee-page p {
+.vorixa-page h1,
+.vorixa-page h2,
+.vorixa-page h3,
+.vorixa-page p {
   margin-top: 0;
 }
 

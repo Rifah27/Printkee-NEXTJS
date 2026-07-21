@@ -14,14 +14,14 @@ const WhyChooseUs = () => {
       title: "1000+ Happy Clients",
       subtitle: "Trusted for Customized Promotional Products",
       content:
-        "We have delivered promotional products across Delhi NCR, Okhla, Gurgaon, Noida, and Haryana to more than a thousand satisfied clients. From corporates to coaching institutes, startups, and schools, PrintKee helps brands create a lasting impression with high-quality custom promotional items.",
+        "We have delivered promotional products across Delhi NCR, Okhla, Gurgaon, Noida, and Haryana to more than a thousand satisfied clients. From corporates to coaching institutes, startups, and schools, Vorixa helps brands create a lasting impression with high-quality custom promotional items.",
     },
     {
       icon: <Truck size={52} aria-hidden="true" role="presentation" />,
       title: "Pan-India Shipping",
       subtitle: "Nationwide Delivery, Always On-Time",
       content:
-        "Get your branded merchandise, corporate gifts, and promotional items delivered anywhere in India. With affordable pricing and timely logistics, PrintKee ensures your brand reaches the right audience without delays.",
+        "Get your branded merchandise, corporate gifts, and promotional items delivered anywhere in India. With affordable pricing and timely logistics, Vorixa ensures your brand reaches the right audience without delays.",
     },
     {
       icon: <BadgeCheck size={52} aria-hidden="true" role="presentation" />,
@@ -62,17 +62,17 @@ const WhyChooseUs = () => {
   return (
     <section className="whychoose-section" aria-labelledby="whychoose-heading">
       <h2 id="whychoose-heading" className="whychoose-heading">
-        Why Choose PrintKee for Your Customized Promotional Products?
+        Why Choose Vorixa for Your Customized Promotional Products?
       </h2>
 
       <h3 className="whychoose-subheading">
-        PrintKee is your trusted partner for customized promotional products,
+        Vorixa is your trusted partner for customized promotional products,
         corporate gifting, branded merchandise, and promotional gift items across
         Delhi NCR, Okhla, Gurgaon, Noida, and Haryana.
       </h3>
 
       {/* Features Section */}
-      <section className="whychoose-grid" aria-label="Reasons to choose PrintKee">
+      <section className="whychoose-grid" aria-label="Reasons to choose Vorixa">
         {features.map((feature, index) => (
           <article className="whychoose-card" key={index}>
             <div className="icon">{feature.icon}</div>

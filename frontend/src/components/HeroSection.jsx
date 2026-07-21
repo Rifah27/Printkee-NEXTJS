@@ -61,7 +61,7 @@ const HeroSection = () => {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ImageGallery",
-          name: "PrintKee Corporate Gifting Highlights",
+          name: "Vorixa Corporate Gifting Highlights",
           image: slides.map((s) => s.image),
         })}
       </script>

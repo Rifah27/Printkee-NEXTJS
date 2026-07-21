@@ -14,14 +14,14 @@ const Sitemap = () => {
         />
         <meta
           name="keywords"
-          content="sitemap, MF Global Services, Printkee sitemap, corporate gifting sitemap, categories, brands"
+          content="sitemap, MF Global Services, Vorixa sitemap, corporate gifting sitemap, categories, brands"
         />
-        <link rel="canonical" href="https://printkee.com/sitemap" />
+        <link rel="canonical" href="https://vorixa.com/sitemap" />
       </Helmet>
 
       <div className="sitemap-container">
         <h1 className="sitemap-heading">Sitemap</h1>
-        <p className="sitemap-description">Explore all key pages and collections on Printkee.</p>
+        <p className="sitemap-description">Explore all key pages and collections on Vorixa.</p>
 
         {/* Main Pages */}
         <section className="sitemap-section">

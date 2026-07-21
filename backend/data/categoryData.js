@@ -89,7 +89,7 @@ const categoryData = [
         image: "/assets/subcategories/round.webp",
 
         seo: {
-          metaTitle: "Custom Round Neck T Shirts with Logo | Printkee India",
+          metaTitle: "Custom Round Neck T Shirts with Logo | Vorixa India",
           metaDescription:
             "Premium round neck t-shirts with custom logo printing for corporate branding, events and staff uniforms. Best bulk prices, top quality and fast India-wide delivery.",
           keywords: [
@@ -111,7 +111,7 @@ const categoryData = [
         image: "/assets/subcategories/cap.webp",
 
         seo: {
-          metaTitle: "Custom Caps with logo for Promotions & Branding | Printkee",
+          metaTitle: "Custom Caps with logo for Promotions & Branding | Vorixa",
           metaDescription:
             "Premium custom caps with logo embroidery and printing for events, marketing, corporate gifting and outdoor branding. Fast delivery and affordable bulk order pricing.",
           keywords: [
@@ -133,7 +133,7 @@ const categoryData = [
         image: "/assets/subcategories/hats.webp",
 
         seo: {
-          metaTitle: "Custom Logo Hats for Corporate Branding & Events| Printkee",
+          metaTitle: "Custom Logo Hats for Corporate Branding & Events| Vorixa",
           metaDescription:
             "Premium promotional hats with custom logo printing for corporate branding, outdoor events and marketing campaigns. Bulk order support with fast delivery across India.",
           keywords: [
@@ -177,7 +177,7 @@ const categoryData = [
         image: "/assets/subcategories/tie.webp",
 
         seo: {
-          metaTitle: "Custom Logo Ties for Corporate Uniforms | Printkee",
+          metaTitle: "Custom Logo Ties for Corporate Uniforms | Vorixa",
           metaDescription:
             "Premium corporate ties with custom branding for office uniforms, events and corporate gifting. Bulk order support with reliable delivery across India for all branding needs.",
           keywords: [
@@ -221,7 +221,7 @@ const categoryData = [
         image: "/assets/subcategories/winterwear.webp",
 
         seo: {
-          metaTitle: "Custom Winter Wear with Logo for Employees | Printkee",
+          metaTitle: "Custom Winter Wear with Logo for Employees | Vorixa",
           metaDescription:
             "Premium winter wear with custom logo printing for employees, gifting and outdoor events. Soft fabric, bulk order support and fast delivery across India.",
           keywords: [
@@ -264,7 +264,7 @@ const categoryData = [
         image: "/assets/products/filesfolder/4.webp",
 
         seo: {
-          metaTitle: "Custom Files & Folders with Logo | Printkee India",
+          metaTitle: "Custom Files & Folders with Logo | Vorixa India",
           metaDescription:
             "Branded office files and folders for employee kits and promotional gifting. High-quality material, custom printing and bulk supply for corporates across India.",
           keywords: [
@@ -286,7 +286,7 @@ const categoryData = [
         image: "/assets/products/pens/1.webp",
 
         seo: {
-          metaTitle: "Customized Pens & Writing Sets for Corporate Gifts | Printkee",
+          metaTitle: "Customized Pens & Writing Sets for Corporate Gifts | Vorixa",
           metaDescription:
             "Elegant writing sets for premium corporate gifting, events, and branding. Custom logo printing, bulk pricing, and fast delivery across India.",
           keywords: [
@@ -308,7 +308,7 @@ const categoryData = [
         image: "/assets/products/lanyards/1.webp",
 
         seo: {
-          metaTitle: "Custom Printed Lanyards & ID Cards for Offices | Printkee",
+          metaTitle: "Custom Printed Lanyards & ID Cards for Offices | Vorixa",
           metaDescription:
             "High-quality lanyards and ID cards for offices, events and branding. Logo printing available with bulk orders and fast delivery across India.",
           keywords: [
@@ -330,7 +330,7 @@ const categoryData = [
         image: "/assets/products/notebooks/16.webp",
 
         seo: {
-          metaTitle: "Custom Notebooks & Diary Sets for Gifting | Printkee",
+          metaTitle: "Custom Notebooks & Diary Sets for Gifting | Vorixa",
           metaDescription:
             "Premium notebooks and diaries with logo printing for office, clients and events. Perfect for corporate gifting with bulk order support and fast delivery across India.",
           keywords: [
@@ -374,7 +374,7 @@ const categoryData = [
         image: "/assets/products/welcomekits/13.webp",
 
         seo: {
-          metaTitle: "Corporate Welcome Kits with Custom Branding | Printkee",
+          metaTitle: "Corporate Welcome Kits with Custom Branding | Vorixa",
           metaDescription:
             "Personalized welcome kits with branded products for new employees, events and promotional gifting. Bulk pricing and India-wide fast delivery available.",
           keywords: [
@@ -396,7 +396,7 @@ const categoryData = [
         image: "/assets/products/clocks/1.webp",
 
         seo: {
-          metaTitle: "Custom Wall Clocks with Logo for Office | Printkee",
+          metaTitle: "Custom Wall Clocks with Logo for Office | Vorixa",
           metaDescription:
             "Elegant promotional clocks with custom logo printing for offices, events, and brand gifting. Bulk orders and fast delivery across India.",
           keywords: [
@@ -418,7 +418,7 @@ const categoryData = [
         image: "/assets/products/keychains/9.webp",
 
         seo: {
-          metaTitle: "Custom Keychains with Logo for Promotions | Printkee",
+          metaTitle: "Custom Keychains with Logo for Promotions | Vorixa",
           metaDescription:
             "Branded keychains for events, advertising and gifting. Durable quality, multiple designs and logo customization available. Bulk order pricing and fast India-wide delivery for corporates.",
           keywords: [
@@ -483,7 +483,7 @@ const categoryData = [
         image: "/assets/products/foldablebags/1.webp",
 
         seo: {
-          metaTitle: "Custom Foldable Bags for Corporate Gifting | Printkee",
+          metaTitle: "Custom Foldable Bags for Corporate Gifting | Vorixa",
           metaDescription:
             "Easy-to-carry foldable bags with custom logo printing for events, giveaways and eco-friendly branding. Best quality for bulk orders with fast delivery across India.",
           keywords: [
@@ -505,7 +505,7 @@ const categoryData = [
         image: "/assets/products/dufflebags/1.webp",
 
         seo: {
-          metaTitle: "Custom Duffle Bags with Logo for Promotions | Printkee",
+          metaTitle: "Custom Duffle Bags with Logo for Promotions | Vorixa",
           metaDescription:
             "Premium duffle bags with custom branding for corporate teams, travel gifting and event promotions. Bulk order pricing with reliable delivery all over India.",
           keywords: [
@@ -527,7 +527,7 @@ const categoryData = [
         image: "/assets/products/totebags/1.webp",
 
         seo: {
-          metaTitle: "Custom Logo Tote Bags for Branding & Gifting | Printkee",
+          metaTitle: "Custom Logo Tote Bags for Branding & Gifting | Vorixa",
           metaDescription:
             "tote bags with custom logo printing for events, trade shows and corporate gifting. Eco-friendly materials, bulk order pricing and fast delivery across India.",
           keywords: [
@@ -571,7 +571,7 @@ const categoryData = [
         image: "/assets/products/wirelesschargers/17.webp",
 
         seo: {
-          metaTitle: "Promotional Wireless Charging Accessories | Printkee",
+          metaTitle: "Promotional Wireless Charging Accessories | Vorixa",
           metaDescription:
             "Modern wireless chargers for promotional gifting and office accessories. Custom branding, premium build quality and bulk delivery options across India.",
           keywords: [
@@ -593,7 +593,7 @@ const categoryData = [
         image: "/assets/products/computeraccessories/1.webp",
 
         seo: {
-          metaTitle: "Custom Office Computer Accessories with Logo | Printkee",
+          metaTitle: "Custom Office Computer Accessories with Logo | Vorixa",
           metaDescription:
             "Custom computer accessories for corporate gifting and office branding. Bulk orders, logo printing and fast delivery across India for employee welcome kits.",
           keywords: [
@@ -615,7 +615,7 @@ const categoryData = [
         image: "/assets/products/powerbanks/13.webp",
 
         seo: {
-          metaTitle: "Custom Power Banks with Logo for Promotions | Printkee",
+          metaTitle: "Custom Power Banks with Logo for Promotions | Vorixa",
           metaDescription:
             "Premium power banks with custom logo printing. Perfect for corporate gifting, events and branding. Bulk pricing and fast nationwide delivery.",
           keywords: [
@@ -680,7 +680,7 @@ const categoryData = [
         image: "/assets/subcategories/sheet.webp",
 
         seo: {
-          metaTitle: "Custom Cork Sheets for Corporate Use | Printkee",
+          metaTitle: "Custom Cork Sheets for Corporate Use | Vorixa",
           metaDescription:
             "Premium cork sheets for sustainable innovation, office décor & product designing. Eco-friendly material available with competitive bulk pricing and fast delivery across India.",
           keywords: [
@@ -702,7 +702,7 @@ const categoryData = [
         image: "/assets/subcategories/combo.webp",
 
         seo: {
-          metaTitle: "Cork Corporate Gift Combos for Branding | Printkee",
+          metaTitle: "Cork Corporate Gift Combos for Branding | Vorixa",
           metaDescription:
             "Eco-friendly cork gifting combos with custom branding, ideal for corporate events and employee welcome kits. Bulk order pricing with fast delivery",
           keywords: [
@@ -724,7 +724,7 @@ const categoryData = [
         image: "/assets/subcategories/coaster.webp",
 
         seo: {
-          metaTitle: "Custom Cork Coasters for Branding & Gifting | Printkee",
+          metaTitle: "Custom Cork Coasters for Branding & Gifting | Vorixa",
           metaDescription:
             "Stylish cork coasters with custom logo printing for offices, cafés & events. Eco-friendly promotional product with reliable bulk supply and timely delivery.",
           keywords: [
@@ -768,7 +768,7 @@ const categoryData = [
         image: "/assets/subcategories/serving.webp",
 
         seo: {
-          metaTitle: "Custom Cork Products for Hotels & Restaurants | Printkee",
+          metaTitle: "Custom Cork Products for Hotels & Restaurants | Vorixa",
           metaDescription:
             "Custom-branded cork serving décor for restaurants, events and premium corporate gifting. Eco-friendly, stylish and available with reliable bulk customization options.",
           keywords: [
@@ -790,7 +790,7 @@ const categoryData = [
         image: "/assets/subcategories/horeca.webp",
 
         seo: {
-          metaTitle: "Eco-Friendly Cork Products for HoReCa Branding | Printkee",
+          metaTitle: "Eco-Friendly Cork Products for HoReCa Branding | Vorixa",
           metaDescription:
             "High-quality sustainable cork products for hotels, bars, and restaurants. Custom branding, durable finish, bulk supplies, and fast delivery across India.",
           keywords: [
@@ -812,7 +812,7 @@ const categoryData = [
         image: "/assets/subcategories/lighting.webp",
 
         seo: {
-          metaTitle: "Custom Cork Lighting for Sustainable Interiors | Printkee",
+          metaTitle: "Custom Cork Lighting for Sustainable Interiors | Vorixa",
           metaDescription:
             "Stylish premium cork lighting for office and home décor. Eco-friendly, modern design, custom branding, and bulk delivery",
           keywords: [
@@ -834,7 +834,7 @@ const categoryData = [
         image: "/assets/subcategories/box.webp",
 
         seo: {
-          metaTitle: "Custom Cork Premium Gift Box for Corporate Gifting | Printkee",
+          metaTitle: "Custom Cork Premium Gift Box for Corporate Gifting | Vorixa",
           metaDescription:
             "Eco-friendly and durable cork gift boxes ideal for premium gifting and brand promotions. Custom logo available with bulk orders and quick India delivery.",
           keywords: [
@@ -856,7 +856,7 @@ const categoryData = [
         image: "/assets/subcategories/desk.webp",
 
         seo: {
-          metaTitle: "Cork Desk Accessories for Offices & Gifting | Printkee",
+          metaTitle: "Cork Desk Accessories for Offices & Gifting | Vorixa",
           metaDescription:
             "Stylish cork desktop accessories for employee kits, workstation décor and branding gifts. Eco-friendly, durable and available for bulk orders across India.",
           keywords: [
@@ -878,7 +878,7 @@ const categoryData = [
         image: "/assets/subcategories/bag.webp",
 
         seo: {
-          metaTitle: "Custom Laptop Backpacks for Office & Branding | Printkee",
+          metaTitle: "Custom Laptop Backpacks for Office & Branding | Vorixa",
           metaDescription:
             "Trendy cork laptop bags and wallets with custom branding for corporate gifting. Strong build, eco-conscious design and bulk delivery anywhere in India.",
           keywords: [
@@ -900,7 +900,7 @@ const categoryData = [
         image: "/assets/subcategories/yoga.webp",
 
         seo: {
-          metaTitle: "Custom Cork Yoga Products for Promotions | Printkee",
+          metaTitle: "Custom Cork Yoga Products for Promotions | Vorixa",
           metaDescription:
             "Anti-slip cork yoga accessories perfect for wellness branding, gyms and corporate gifting. Sustainable products with bulk order support and fast delivery.",
           keywords: [
@@ -944,7 +944,7 @@ const categoryData = [
         image: "/assets/products/sipperbottles/1.webp",
 
         seo: {
-          metaTitle: "Custom Sipper Bottles for Branding & Gifting | Printkee",
+          metaTitle: "Custom Sipper Bottles for Branding & Gifting | Vorixa",
           metaDescription:
             "Premium sipper bottles with custom logo printing for branding, events & corporate gifting. Bulk orders with fast delivery across India.",
           keywords: [
@@ -988,7 +988,7 @@ const categoryData = [
         image: "/assets/products/coffeemugs/1.webp",
 
         seo: {
-          metaTitle: "Custom Coffee Mugs for Office Branding | Printkee",
+          metaTitle: "Custom Coffee Mugs for Office Branding | Vorixa",
           metaDescription:
             "Premium coffee mugs with custom logo printing for employee gifting, events & office branding. Bulk order pricing with fast delivery across India. Request a quote today!",
           keywords: [
@@ -1010,7 +1010,7 @@ const categoryData = [
         image: "/assets/products/ceramicmugs/1.webp",
 
         seo: {
-          metaTitle: "Custom Logo Ceramic Mugs for Office Use | Printkee",
+          metaTitle: "Custom Logo Ceramic Mugs for Office Use | Vorixa",
           metaDescription:
             "Premium ceramic mugs with custom logo printing for corporate gifting, events & office branding. Bulk order pricing with fast and reliable delivery across India.",
           keywords: [
@@ -1034,7 +1034,7 @@ const categoryData = [
     image: "/assets/categories/trophy.webp",
 
     seo: {
-      metaTitle: "Custom Trophies & Mementos for Corporate Awards | Printkee",
+      metaTitle: "Custom Trophies & Mementos for Corporate Awards | Vorixa",
       metaDescription:
         "Premium trophies and mementos for awards, sports events and corporate recognition with custom engraving and fast delivery.",
       keywords: [

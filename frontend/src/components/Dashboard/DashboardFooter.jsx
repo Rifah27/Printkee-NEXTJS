@@ -4,7 +4,7 @@ import React from "react";
 const DashboardFooter = () => {
   return (
     <footer className="dashboard-footer">
-      © {new Date().getFullYear()} Printkee | All Rights Reserved .
+      © {new Date().getFullYear()} Vorixa | All Rights Reserved .
     </footer>
   );
 };

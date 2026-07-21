@@ -59,7 +59,7 @@ const Diwali = () => {
     }
   };
 
-  const canonicalUrl = "https://printkee.com/diwali-special";
+  const canonicalUrl = "https://vorixa.com/diwali-special";
 
   return (
     <div className="diwali-page">

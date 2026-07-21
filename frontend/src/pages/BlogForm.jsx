@@ -41,7 +41,7 @@ const BlogForm = () => {
         />
         
         {/* ✅ Canonical Tag Added */}
-        <link rel="canonical" href="https://printkee.com/blogs/post" />
+        <link rel="canonical" href="https://vorixa.com/blogs/post" />
       </Helmet>
 
       <form onSubmit={handleSubmit} className="blog-form slide-up" aria-label="Post a new blog form">

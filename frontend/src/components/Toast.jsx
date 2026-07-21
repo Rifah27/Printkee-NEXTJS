@@ -38,7 +38,7 @@ const Toast = ({ type = 'info', message, onClose }) => {
   return (
     <div
       ref={toastRef}
-      className={`printkee-toast printkee-toast-${type} ${closing ? "closing" : ""}`}
+      className={`vorixa-toast vorixa-toast-${type} ${closing ? "closing" : ""}`}
       role="alert"
       aria-live="assertive"
       tabIndex="0"

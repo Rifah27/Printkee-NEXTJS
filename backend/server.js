@@ -58,9 +58,9 @@ app.get("/", (req, res) => {
   const override = seoOverrides[path];
 
   const html = renderSEO({
-    title: override?.title || "Printkee | Premium Corporate Gifts",
+    title: override?.title || "Vorixa | Premium Corporate Gifts",
     description: override?.description || "Custom corporate gifting solutions across India.",
-    canonical: `https://printkee.com${path}`,
+    canonical: `https://vorixa.com${path}`,
     seoContent: "",
   });
   res.send(html);
@@ -83,15 +83,15 @@ app.get("/:category/:subcategory/:product", async (req, res) => {
 
     if (!product && !override) {
       const html = renderSEO({
-        title: "Product Not Found | Printkee",
+        title: "Product Not Found | Vorixa",
         description: "Explore our wide range of corporate gifts.",
-        canonical: `https://printkee.com${path}`,
+        canonical: `https://vorixa.com${path}`,
       });
       return res.send(html);
     }
 
     const title =
-      override?.title || product?.seo?.metaTitle || `${product?.name} | Printkee`;
+      override?.title || product?.seo?.metaTitle || `${product?.name} | Vorixa`;
 
     const description =
       override?.description ||
@@ -99,7 +99,7 @@ app.get("/:category/:subcategory/:product", async (req, res) => {
       product?.description?.short ||
       "Premium corporate promotional products";
 
-    const canonical = `https://printkee.com${path}`;
+    const canonical = `https://vorixa.com${path}`;
 
     const seoContent = product ? `
     <article class="seo-product">
@@ -151,20 +151,20 @@ app.get("/:category/:subcategory", async (req, res) => {
 
     if (!subcategory && !override) {
       const html = renderSEO({
-        title: "Collection | Printkee",
+        title: "Collection | Vorixa",
         description: "Explore our premium corporate gift collections.",
-        canonical: `https://printkee.com${path}`,
+        canonical: `https://vorixa.com${path}`,
       });
       return res.send(html);
     }
 
     const title =
-      override?.title || subcategory?.seo?.metaTitle || `${subcategory?.name} | Printkee`;
+      override?.title || subcategory?.seo?.metaTitle || `${subcategory?.name} | Vorixa`;
 
     const description =
       override?.description || subcategory?.seo?.metaDescription || subcategory?.description || "";
 
-    const canonical = `https://printkee.com${path}`;
+    const canonical = `https://vorixa.com${path}`;
 
     const seoContent = subcategory ? `
     <section class="seo-subcategory">
@@ -209,26 +209,26 @@ app.get("/:category", async (req, res) => {
 
     if (!category && !override) {
       const html = renderSEO({
-        title: "Category | Printkee",
+        title: "Category | Vorixa",
         description: "Premium corporate gifts for every occasion.",
-        canonical: `https://printkee.com${path}`,
+        canonical: `https://vorixa.com${path}`,
       });
       return res.send(html);
     }
 
     const title =
-      override?.title || category?.seo?.metaTitle || `${category?.name} | Printkee`;
+      override?.title || category?.seo?.metaTitle || `${category?.name} | Vorixa`;
 
     const description =
       override?.description || category?.seo?.metaDescription || category?.description || "";
 
-    const canonical = `https://printkee.com${path}`;
+    const canonical = `https://vorixa.com${path}`;
 
     const seoContent = category ? `
     <section class="seo-category">
     <h1>${category.name}</h1>
     <p>${category.description}</p>
-    <p>Printkee offers premium ${category.name} for corporate gifting.</p>
+    <p>Vorixa offers premium ${category.name} for corporate gifting.</p>
     <h2>Popular Products</h2>
     <ul>
     <li>Custom Apparel</li>
@@ -275,7 +275,7 @@ app.get("/blog/:id", async (req, res) => {
     const title = blog.title;
     const description = blog.excerpt || blog.content.slice(0, 150);
 
-    const canonical = `https://printkee.com/blog/${blog._id}`;
+    const canonical = `https://vorixa.com/blog/${blog._id}`;
 
     const seoContent = `
     <article>
@@ -308,9 +308,9 @@ app.get("/blog/:id", async (req, res) => {
 app.get(/(.*)/, (req, res) => {
   try {
     const html = renderSEO({
-      title: "Printkee | Premium Corporate Gifts",
+      title: "Vorixa | Premium Corporate Gifts",
       description: "Customized promotional products and corporate gifting solutions.",
-      canonical: `https://printkee.com${req.path}`,
+      canonical: `https://vorixa.com${req.path}`,
     });
     res.send(html);
   } catch (err) {

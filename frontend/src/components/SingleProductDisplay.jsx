@@ -31,7 +31,7 @@ const SingleProductDisplay = () => {
   const [relatedProducts, setRelatedProducts] = useState([]);
   const [showModal, setShowModal] = useState(false);
 
-  const canonicalUrl = `https://printkee.com/${categorySlug}/${subcategorySlug}/${productSlug}`;
+  const canonicalUrl = `https://vorixa.com/${categorySlug}/${subcategorySlug}/${productSlug}`;
 
   // FETCH PRODUCT
   useEffect(() => {
