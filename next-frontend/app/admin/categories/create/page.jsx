@@ -10,8 +10,8 @@ export default function AdminCategoriesCreatePage() {
       <div className="admin-page-head">
         <div>
           <p className="admin-kicker">Create category</p>
-          <h1>New PrintKee category</h1>
-          <p>Use this page to add a new category for the public PrintKee catalog.</p>
+          <h1>New Vorixa category</h1>
+          <p>Use this page to add a new category for the public Vorixa catalog.</p>
         </div>
         <Link href="/admin/categories" className="admin-btn admin-btn--ghost">
           Back to categories

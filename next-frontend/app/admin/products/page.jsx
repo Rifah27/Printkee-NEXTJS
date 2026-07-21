@@ -43,7 +43,7 @@ export default function AdminProductsPage() {
       <AdminResourceManager
         title="Manage product catalog"
         kicker="Products"
-        description="Browse, search, and edit PrintKee products. Use the create product page for new items."
+        description="Browse, search, and edit Vorixa products. Use the create product page for new items."
         badge="Backend CRUD"
         resourceName="product"
         resourceLabel="Product"

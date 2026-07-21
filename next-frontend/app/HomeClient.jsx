@@ -175,7 +175,7 @@ const faqs = [
   },
   {
     question: "Do you support bulk corporate gifting?",
-    answer: "Yes. PrintKee handles bulk orders for employees, clients, events, campaigns, schools, offices, and distributed teams.",
+    answer: "Yes. Vorixa handles bulk orders for employees, clients, events, campaigns, schools, offices, and distributed teams.",
   },
   {
     question: "Can products be customized with my logo?",
@@ -183,7 +183,7 @@ const faqs = [
   },
   {
     question: "Do you deliver outside Delhi NCR?",
-    answer: "Yes. PrintKee supports shipping across India for corporate gifting and promotional merchandise orders.",
+    answer: "Yes. Vorixa supports shipping across India for corporate gifting and promotional merchandise orders.",
   },
 ];
 
@@ -263,7 +263,7 @@ export default function HomeClient({ categories = [] }) {
           <div className="home-section__head">
             <p className="home-kicker">Product categories</p>
             <h2>Browse custom gifting categories</h2>
-            <p>Explore PrintKee's core ranges for promotional items, team merchandise, and corporate gifting.</p>
+            <p>Explore Vorixa's core ranges for promotional items, team merchandise, and corporate gifting.</p>
           </div>
           <div className="home-category-grid">
             {visibleCategories.map((category) => (
@@ -327,7 +327,7 @@ export default function HomeClient({ categories = [] }) {
       <section className="home-proof">
         <div className="container home-proof__inner">
           <div>
-            <p className="home-kicker">Why PrintKee</p>
+            <p className="home-kicker">Why Vorixa</p>
             <h2>Built for bulk orders, brand finish, and dependable delivery.</h2>
             <Link href="/customize" className="home-btn home-btn--primary">
               Start customizing <FiArrowRight aria-hidden="true" />
@@ -388,7 +388,7 @@ export default function HomeClient({ categories = [] }) {
           <div>
             <p className="home-kicker">Need a custom quote?</p>
             <h2>Tell us the occasion, quantity, budget, and logo requirement.</h2>
-            <p>PrintKee can help shortlist products, build kits, finalize branding, and coordinate delivery.</p>
+            <p>Vorixa can help shortlist products, build kits, finalize branding, and coordinate delivery.</p>
           </div>
           <Link href="/contact" className="home-btn home-btn--dark">
             Talk to a gifting expert <FiArrowRight aria-hidden="true" />
@@ -410,7 +410,7 @@ export default function HomeClient({ categories = [] }) {
           <div className="home-section__head">
             <p className="home-kicker">Customize products</p>
             <h2>Tailor every gift to your brand, budget and event.</h2>
-            <p>PrintKee helps you build branded merchandise with fast mockups, packaging, and bulk support for corporate gifting campaigns.</p>
+            <p>Vorixa helps you build branded merchandise with fast mockups, packaging, and bulk support for corporate gifting campaigns.</p>
           </div>
           <div className="home-customize-grid">
             {customizeHighlights.map((item) => {

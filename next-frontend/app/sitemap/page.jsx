@@ -1,11 +1,11 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Sitemap | PrintKee",
+  title: "Sitemap | Vorixa",
   description:
-    "Navigate PrintKee pages including categories, brands, blogs, customization, and contact information.",
+    "Navigate Vorixa pages including categories, brands, blogs, customization, and contact information.",
   alternates: {
-    canonical: "https://printkee.com/sitemap",
+    canonical: "https://vorixa.com/sitemap",
   },
 };
 
@@ -35,9 +35,9 @@ export default function SitemapPage() {
     <main className="sitemap-page">
       <section className="container sitemap-page__inner">
         <div className="sitemap-page__head">
-          <p className="catalog-kicker">PrintKee routes</p>
+          <p className="catalog-kicker">Vorixa routes</p>
           <h1>Sitemap</h1>
-          <p>Explore all key pages and collections on PrintKee.</p>
+          <p>Explore all key pages and collections on Vorixa.</p>
         </div>
 
         <div className="sitemap-page__grid">

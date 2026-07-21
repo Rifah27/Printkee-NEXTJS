@@ -28,7 +28,7 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
 
   useEffect(() => {
-    if (window.localStorage.getItem("printkee-admin-token")) {
+    if (window.localStorage.getItem("vorixa-admin-token")) {
       router.replace("/admin");
     }
   }, [router]);
@@ -47,12 +47,12 @@ export default function LoginPage() {
       const response = await api.post("/admin/login", form);
       const token = response.data.token;
 
-      window.localStorage.setItem("printkee-admin-token", token);
+      window.localStorage.setItem("vorixa-admin-token", token);
       window.localStorage.setItem("adminToken", token);
       router.push("/admin");
     } catch (err) {
       console.error(err);
-      setError("Invalid email or password. Please check your PrintKee admin credentials.");
+      setError("Invalid email or password. Please check your Vorixa admin credentials.");
     } finally {
       setLoading(false);
     }
@@ -63,13 +63,13 @@ export default function LoginPage() {
       <section className="auth-layout container">
         <div className="auth-brand-panel">
           <div className="auth-brand-panel__logo">
-            <img src="/assets/printkeeLogo.webp" alt="PrintKee" />
+            <img src="/assets/vorixaLogo.png" alt="Vorixa" />
           </div>
-          <p className="auth-kicker">PrintKee Admin</p>
+          <p className="auth-kicker">Vorixa Admin</p>
           <h1>Manage corporate gifting content with confidence.</h1>
           <p>
             Sign in to update product ranges, category records, custom gifting
-            content, and catalog information used across the PrintKee Next app.
+            content, and catalog information used across the Vorixa Next app.
           </p>
 
           <div className="auth-highlight-grid">
@@ -95,7 +95,7 @@ export default function LoginPage() {
           <p className="auth-kicker">Secure sign in</p>
           <h2>Access dashboard</h2>
           <p className="auth-card__copy">
-            Use your PrintKee administrator credentials to continue.
+            Use your Vorixa administrator credentials to continue.
           </p>
 
           {error && <p className="auth-alert auth-alert--error">{error}</p>}
@@ -109,7 +109,7 @@ export default function LoginPage() {
                 value={form.email}
                 onChange={updateField}
                 autoComplete="email"
-                placeholder="admin@printkee.com"
+                placeholder="admin@vorixa.com"
                 required
               />
             </label>

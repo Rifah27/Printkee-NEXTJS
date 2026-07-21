@@ -47,16 +47,16 @@ export default function Footer() {
 
       <div className="container site-footer__grid">
         <div className="site-footer__brand">
-          <Link href="/" className="site-logo site-logo--footer" aria-label="PrintKee home">
+          <Link href="/" className="site-logo site-logo--footer" aria-label="Vorixa home">
             <span className="site-logo__mark" aria-hidden="true">
-              <img src="/assets/printkeeLogo.webp" alt="" />
+              <img src="/assets/vorixaLogo.png" alt="" />
             </span>
             <span className="site-logo__text">
-              <b>PrintKee</b>
+              <b>Vorixa</b>
             </span>
           </Link>
           <p>
-            PrintKee is your trusted partner in custom branding. We provide end-to-end customized
+            Vorixa is your trusted partner in custom branding. We provide end-to-end customized
             gifting solutions with premium packaging, high-quality products, and timely delivery.
           </p>
           <div className="site-footer__badges">
@@ -83,20 +83,20 @@ export default function Footer() {
         <div className="site-footer__column site-footer__contact">
           <h3>Contact</h3>
           <a href="tel:+918750708222"><FiPhone aria-hidden="true" /> +91 87507 08222</a>
-          <a href="mailto:sales@printkee.com"><FiMail aria-hidden="true" /> sales@printkee.com</a>
+          <a href="mailto:sales@vorixa.com"><FiMail aria-hidden="true" /> sales@vorixa.com</a>
           <span>
             <FiMapPin aria-hidden="true" />
             Address: F90/1, Beside ESIC Hospital, Okhla Industrial Area Phase 1, New Delhi - 110020, India
           </span>
           <span><FiTruck aria-hidden="true" /> Branded delivery across India</span>
           <div className="site-footer__socials">
-            <a href="https://www.facebook.com/share/1DF9K4wAHX/" target="_blank" rel="noopener noreferrer" aria-label="PrintKee Facebook">
+            <a href="https://www.facebook.com/share/1DF9K4wAHX/" target="_blank" rel="noopener noreferrer" aria-label="Vorixa Facebook">
               <FiFacebook aria-hidden="true" />
             </a>
-            <a href="https://www.instagram.com/printkee?igsh=MThmZDVhamJ1dGp6Mw==" target="_blank" rel="noopener noreferrer" aria-label="PrintKee Instagram">
+            <a href="https://www.instagram.com/vorixa?igsh=MThmZDVhamJ1dGp6Mw==" target="_blank" rel="noopener noreferrer" aria-label="Vorixa Instagram">
               <FiInstagram aria-hidden="true" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="PrintKee LinkedIn">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Vorixa LinkedIn">
               <FiLinkedin aria-hidden="true" />
             </a>
           </div>
@@ -104,7 +104,7 @@ export default function Footer() {
       </div>
 
         <div className="container site-footer__bottom">
-        <span>&copy; {year} PrintKee. All rights reserved.</span>
+        <span>&copy; {year} Vorixa. All rights reserved.</span>
         <span>Premium Custom Branding Solutions India</span>
       </div>
     </footer>

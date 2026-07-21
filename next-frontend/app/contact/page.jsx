@@ -36,7 +36,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="printkee-page contact-redesign">
+    <main className="vorixa-page contact-redesign">
       <section className="contact-redesign__hero">
         <div className="container">
           <p>Contact Us</p>
@@ -88,7 +88,7 @@ export default function ContactPage() {
             <h2>Contact Information</h2>
             <div>
               <FiMail aria-hidden="true" />
-              <span><strong>Email:</strong> sales@printkee.com</span>
+              <span><strong>Email:</strong> sales@vorixa.com</span>
             </div>
             <div>
               <FiPhone aria-hidden="true" />

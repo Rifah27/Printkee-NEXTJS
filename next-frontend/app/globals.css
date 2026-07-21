@@ -137,21 +137,18 @@ section {
 }
 
 .site-logo__mark {
-  display: block;
+  align-items: center;
+  display: flex;
   flex: 0 0 auto;
-  height: 4.45rem;
+  height: 5.5rem;
   overflow: hidden;
-  position: relative;
-  width: 3.35rem;
+  width: 9rem;
 }
 
 .site-logo__mark img {
-  height: 4.45rem;
-  left: -0.08rem;
-  max-width: none;
+  height: 100%;
+  mix-blend-mode: multiply;
   object-fit: contain;
-  position: absolute;
-  top: 0;
   width: auto;
 }
 
@@ -163,7 +160,7 @@ section {
 
 .site-logo b {
   color: var(--header-ink);
-  font-size: 1.72rem;
+  font-size: 2rem;
   letter-spacing: 0;
   line-height: 1;
 }
@@ -3687,7 +3684,7 @@ body {
     width: 100%;
   }
 }
-.printkee-page {
+.vorixa-page {
   --pp-ink: #17211f;
   --pp-muted: #65736f;
   --pp-line: #dfe8e2;
@@ -3701,15 +3698,15 @@ body {
   color: var(--pp-ink);
 }
 
-.printkee-page img {
+.vorixa-page img {
   display: block;
   max-width: 100%;
 }
 
-.printkee-page h1,
-.printkee-page h2,
-.printkee-page h3,
-.printkee-page p {
+.vorixa-page h1,
+.vorixa-page h2,
+.vorixa-page h3,
+.vorixa-page p {
   margin-top: 0;
 }
 

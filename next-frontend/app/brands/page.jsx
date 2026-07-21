@@ -1,9 +1,9 @@
 import BrandsContent from "../../components/BrandsContent";
 
 export const metadata = {
-  title: "Trusted by Leading Brands | PrintKee",
+  title: "Trusted by Leading Brands | Vorixa",
   description:
-    "PrintKee is trusted for custom promotional products, corporate gifting, branded merchandise, bulk orders, and pan-India delivery.",
+    "Vorixa is trusted for custom promotional products, corporate gifting, branded merchandise, bulk orders, and pan-India delivery.",
 };
 
 export default function BrandsPage() {

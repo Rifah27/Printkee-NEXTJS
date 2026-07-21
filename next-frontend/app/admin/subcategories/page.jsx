@@ -26,7 +26,7 @@ export default function AdminSubcategoriesPage() {
       <AdminResourceManager
         title="Manage subcategories"
         kicker="Subcategories"
-        description="Browse and edit PrintKee subcategories. Use the create subcategory page for new product groups."
+        description="Browse and edit Vorixa subcategories. Use the create subcategory page for new product groups."
         badge="Backend CRUD"
         resourceName="subcategory"
         resourceLabel="Subcategory"

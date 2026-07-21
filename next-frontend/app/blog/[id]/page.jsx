@@ -4,7 +4,7 @@ export async function generateMetadata({ params }) {
   const { id } = params;
   const path = `/blog/${id}`;
   
-  let title = "Blog | Printkee";
+  let title = "Blog | Vorixa";
   let description = "Customized promotional products and corporate gifting solutions.";
 
   let blogData = null;
@@ -20,9 +20,9 @@ export async function generateMetadata({ params }) {
   return {
     title,
     description,
-    alternates: { canonical: `https://printkee.com${path}` },
+    alternates: { canonical: `https://vorixa.com${path}` },
     robots: "index, follow",
-    openGraph: { title, description, url: `https://printkee.com${path}`, siteName: 'Printkee', type: 'article' },
+    openGraph: { title, description, url: `https://vorixa.com${path}`, siteName: 'Vorixa', type: 'article' },
     twitter: { card: 'summary_large_image', title, description }
   };
 }
@@ -46,17 +46,17 @@ export default async function Page({ params }) {
     "@type": "BlogPosting",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://printkee.com${path}`
+      "@id": `https://vorixa.com${path}`
     },
-    "headline": blogData?.title || "Printkee Blog",
+    "headline": blogData?.title || "Vorixa Blog",
     "description": blogData?.excerpt || "",
     "author": {
       "@type": "Person",
-      "name": blogData?.author || "Printkee"
+      "name": blogData?.author || "Vorixa"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Printkee"
+      "name": "Vorixa"
     }
   };
 

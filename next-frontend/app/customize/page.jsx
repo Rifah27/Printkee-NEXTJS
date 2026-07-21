@@ -85,7 +85,7 @@ export default function CustomizePage() {
       <section className="customize-hero">
         <div className="container customize-hero__inner">
           <div className="customize-hero__copy">
-            <p className="customize-kicker">Customize with PrintKee</p>
+            <p className="customize-kicker">Customize with Vorixa</p>
             <h1>Build branded merchandise your team will actually use.</h1>
             <p>
               Create custom corporate gifts, employee kits, event merchandise,
@@ -171,7 +171,7 @@ export default function CustomizePage() {
             <p className="customize-kicker">Branding options</p>
             <h2>Pick the right finish for your product.</h2>
             <p>
-              PrintKee supports common corporate branding needs including logo
+              Vorixa supports common corporate branding needs including logo
               printing, engraving, embroidery, full-color artwork, and premium
               kit packaging.
             </p>

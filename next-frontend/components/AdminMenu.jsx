@@ -37,7 +37,7 @@ export default function AdminMenu() {
   const router = useRouter();
 
   const handleLogout = () => {
-    window.localStorage.removeItem("printkee-admin-token");
+    window.localStorage.removeItem("vorixa-admin-token");
     window.localStorage.removeItem("adminToken");
     router.replace("/login");
   };
@@ -46,10 +46,10 @@ export default function AdminMenu() {
     <aside className="admin-menu">
       <Link href="/admin" className="admin-menu__brand">
         <span className="admin-menu__logo">
-          <img src="/assets/printkeeLogo.webp" alt="PrintKee" />
+          <img src="/assets/vorixaLogo.png" alt="Vorixa" />
         </span>
         <span>
-          <strong>PrintKee</strong>
+          <strong>Vorixa</strong>
           <small>Catalog Admin</small>
         </span>
       </Link>

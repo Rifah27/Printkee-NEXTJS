@@ -29,7 +29,7 @@ export default function BlogCard({ blog }) {
           By {blog.author ? blog.author : "Unknown"} on{" "}
           {blog.date ? new Date(blog.date).toLocaleDateString() : "Unknown date"}
         </p>
-        <p className="blogs-redesign__excerpt">{excerpt ? `${excerpt.slice(0, 140)}...` : "Read the latest story from PrintKee."}</p>
+        <p className="blogs-redesign__excerpt">{excerpt ? `${excerpt.slice(0, 140)}...` : "Read the latest story from Vorixa."}</p>
         <Link href={`/blog/${blog._id}`} className="blogs-redesign__read" aria-label={`Read full blog: ${blog.title}`}>
           Read More
         </Link>

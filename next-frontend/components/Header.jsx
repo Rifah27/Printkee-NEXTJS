@@ -122,12 +122,9 @@ export default function Header() {
 
       <div className="site-header__main">
         <div className="container site-header__main-inner">
-          <Link href="/" className="site-logo" aria-label="PrintKee home">
+          <Link href="/" className="site-logo" aria-label="Vorixa home">
             <span className="site-logo__mark" aria-hidden="true">
-              <img src="/assets/printkeeLogo.webp" alt="" />
-            </span>
-            <span className="site-logo__text">
-              <b>PrintKee</b>
+              <img src="/assets/vorixaLogo.png" alt="Vorixa" />
             </span>
           </Link>
 
@@ -190,7 +187,7 @@ export default function Header() {
             {megaOpen && (
               <div className="site-mega-menu" onMouseEnter={openMega} onMouseLeave={closeMegaDelayed}>
                 <div className="site-mega-menu__feature">
-                  <p>PrintKee Catalog</p>
+                  <p>Vorixa Catalog</p>
                   <h2>Customized promotional products for every campaign.</h2>
                   <Link href="/contact">Talk to gifting expert</Link>
                 </div>
@@ -224,7 +221,7 @@ export default function Header() {
             ))}
           </div>
 
-          <a href="mailto:sales@printkee.com" className="site-nav__email">sales@printkee.com</a>
+          <a href="mailto:sales@vorixa.com" className="site-nav__email">sales@vorixa.com</a>
         </div>
       </nav>
 

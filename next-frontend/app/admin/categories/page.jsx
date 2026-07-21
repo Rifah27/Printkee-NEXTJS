@@ -15,7 +15,7 @@ export default function AdminCategoriesPage() {
       <AdminResourceManager
         title="Manage categories"
         kicker="Categories"
-        description="Browse and edit main PrintKee categories. Use the create category page for new sections."
+        description="Browse and edit main Vorixa categories. Use the create category page for new sections."
         badge="Backend CRUD"
         resourceName="category"
         resourceLabel="Category"

@@ -18,7 +18,7 @@ export function generateMetadata({ params }) {
     description: brand.description,
     keywords: brand.tags,
     alternates: {
-      canonical: `https://printkee.com/brands/${brand.slug}`,
+      canonical: `https://vorixa.com/brands/${brand.slug}`,
     },
   };
 }
@@ -63,7 +63,7 @@ export default function BrandDetailPage({ params }) {
               <FiPackage aria-hidden="true" />
               <h2>{item}</h2>
               <p>
-                Share your quantity, logo, timeline, and delivery locations. The PrintKee team will
+                Share your quantity, logo, timeline, and delivery locations. The Vorixa team will
                 recommend suitable {brand.name} options for your campaign.
               </p>
             </article>

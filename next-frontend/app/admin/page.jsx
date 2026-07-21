@@ -63,9 +63,9 @@ export default function AdminDashboardPage() {
       <div className="admin-page-head">
         <div>
           <p className="admin-kicker">Dashboard</p>
-          <h1>PrintKee admin console</h1>
+          <h1>Vorixa admin console</h1>
           <p>
-            Manage the full PrintKee catalog, update product listings, categories,
+            Manage the full Vorixa catalog, update product listings, categories,
             subcategories, and campaign banners from one minimal dashboard.
           </p>
         </div>
@@ -94,7 +94,7 @@ export default function AdminDashboardPage() {
 
       <div className="admin-dashboard-hero">
         <div>
-          <p className="admin-kicker">PrintKee positioning</p>
+          <p className="admin-kicker">Vorixa positioning</p>
 
           <h2>
             Premium corporate gifting, custom merchandise, and branded products

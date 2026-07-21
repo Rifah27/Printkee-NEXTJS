@@ -22,7 +22,7 @@ export default function AdminSubcategoriesCreatePage() {
       <div className="admin-page-head">
         <div>
           <p className="admin-kicker">Create subcategory</p>
-          <h1>New PrintKee subcategory</h1>
+          <h1>New Vorixa subcategory</h1>
           <p>Use this page to add a subcategory that maps under a parent category.</p>
         </div>
         <Link href="/admin/subcategories" className="admin-btn admin-btn--ghost">

@@ -11,7 +11,7 @@ export const brandTrustPoints = [
     value: "1000+",
     label: "Happy Clients",
     title: "Trusted for Customized Promotional Products",
-    copy: "PrintKee has delivered promotional products across Delhi NCR, Okhla, Gurgaon, Noida, Haryana, and India for corporates, coaching institutes, startups, and schools.",
+    copy: "Vorixa has delivered promotional products across Delhi NCR, Okhla, Gurgaon, Noida, Haryana, and India for corporates, coaching institutes, startups, and schools.",
   },
   {
     value: "Pan-India",
@@ -41,7 +41,7 @@ export const brandTrustPoints = [
 
 export const brandTestimonials = [
   {
-    quote: "Printkee made our festive gifting process effortless and stylish. Great support and timely delivery!",
+    quote: "Vorixa made our festive gifting process effortless and stylish. Great support and timely delivery!",
     name: "Ananya Sharma",
     role: "HR Manager, TechNova Pvt Ltd",
   },

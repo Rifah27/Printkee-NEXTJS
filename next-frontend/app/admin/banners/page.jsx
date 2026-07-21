@@ -59,7 +59,7 @@ export default function AdminBannersPage() {
           { key: "href", label: "Link" },
         ]}
         seedItems={initialBanners}
-        localStorageKey="printkee-admin-banners"
+        localStorageKey="vorixa-admin-banners"
         createLabel="Save banner"
       />
     </AdminPageShell>

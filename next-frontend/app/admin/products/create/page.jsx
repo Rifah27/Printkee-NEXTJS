@@ -39,7 +39,7 @@ export default function AdminProductsCreatePage() {
       <div className="admin-page-head">
         <div>
           <p className="admin-kicker">Create product</p>
-          <h1>New PrintKee product</h1>
+          <h1>New Vorixa product</h1>
           <p>Use this page to add a product with category, subcategory, images, pricing and attributes.</p>
         </div>
         <Link href="/admin/products" className="admin-btn admin-btn--ghost">

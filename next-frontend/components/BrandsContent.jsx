@@ -19,7 +19,7 @@ export default function BrandsContent() {
               Trusted brand solutions<br />for your business.
             </h1>
             <p>
-              PrintKee helps companies create high-quality custom promotional
+              Vorixa helps companies create high-quality custom promotional
               items, branded merchandise, employee welcome kits, festive hampers,
               event giveaways, and premium corporate gifts across India.
             </p>
@@ -33,7 +33,7 @@ export default function BrandsContent() {
             </div>
           </div>
 
-          <div className="brands-hero__panel" aria-label="PrintKee trust summary">
+          <div className="brands-hero__panel" aria-label="Vorixa trust summary">
             <strong>1000+</strong>
             <span>happy clients served with custom branding, bulk order support, and pan-India delivery.</span>
           </div>
@@ -76,10 +76,10 @@ export default function BrandsContent() {
       <section className="brands-section">
         <div className="container">
           <div className="brands-section__head">
-            <p className="brands-kicker">Why PrintKee</p>
+            <p className="brands-kicker">Why Vorixa</p>
             <h2>Built for customized promotional products at business scale.</h2>
             <p>
-              The live PrintKee promise is simple: strong product quality,
+              The live Vorixa promise is simple: strong product quality,
               dependable delivery, custom branding, and quantity-friendly pricing
               for corporate gifting campaigns.
             </p>

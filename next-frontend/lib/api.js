@@ -8,7 +8,7 @@ export const authHeader = () => {
   if (typeof window === "undefined") return {};
 
   const token =
-    localStorage.getItem("printkee-admin-token") ||
+    localStorage.getItem("vorixa-admin-token") ||
     localStorage.getItem("adminToken") ||
     localStorage.getItem("token") ||
     localStorage.getItem("authToken");

@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { FiCheck } from "react-icons/fi";
 
-const aboutText = `Printkee is your trusted destination for custom corporate gifting and
+const aboutText = `Vorixa is your trusted destination for custom corporate gifting and
 promotional merchandise, designed to help brands stand out and leave a
 lasting impression. We specialize in high-quality, customized products that
 align perfectly with your brand identity and business goals.
-With a strong focus on creativity, quality, and reliability, Printkee works with
+With a strong focus on creativity, quality, and reliability, Vorixa works with
 corporates, startups, educational institutions, and event organizers to
 deliver end-to-end branding solutions. From product selection and
 customization to production and on-time delivery, we ensure a smooth and
@@ -14,12 +14,12 @@ Our extensive product range includes custom apparel, bags, drinkware,
 eco-friendly products, office and writing essentials, technology accessories,
 trophies, and curated welcome kits. Whether it's employee onboarding,
 corporate events, client gifting, promotional campaigns, or brand
-activations, Printkee provides solutions that make an impact.
-At Printkee, we believe corporate gifting is more than just a product—it's a
+activations, Vorixa provides solutions that make an impact.
+At Vorixa, we believe corporate gifting is more than just a product—it's a
 powerful branding tool. Our commitment to premium quality, attention to
 detail, and customer satisfaction has made us a preferred partner for
 businesses across India.
-Let Printkee help you transform your brand ideas into memorable,
+Let Vorixa help you transform your brand ideas into memorable,
 customized experiences.`;
 
 const points = [
@@ -32,12 +32,12 @@ const points = [
 
 export default function AboutPage() {
   return (
-    <main className="printkee-page about-redesign">
+    <main className="vorixa-page about-redesign">
       <section className="about-redesign__hero">
         <div className="container about-redesign__hero-grid">
           <div className="about-redesign__copy">
-            <p>About Printkee</p>
-            <h1>About Printkee</h1>
+            <p>About Vorixa</p>
+            <h1>About Vorixa</h1>
             <div className="about-redesign__text">
               {aboutText.split("\n").map((line) => (
                 <span key={line}>{line}</span>

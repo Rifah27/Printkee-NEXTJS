@@ -7,7 +7,7 @@ export default function ProtectedAdmin({ children }) {
   const [blocked, setBlocked] = useState(false);
 
   useEffect(() => {
-    const token = window.localStorage.getItem('printkee-admin-token');
+    const token = window.localStorage.getItem('vorixa-admin-token');
     if (!token) {
       setBlocked(true);
       router.replace('/login');

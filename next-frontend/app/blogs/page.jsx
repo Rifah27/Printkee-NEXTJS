@@ -2,22 +2,22 @@ import Link from "next/link";
 import BlogCard from "../../components/BlogCard";
 
 export const metadata = {
-  title: "Blog | Printkee",
-  description: "Read the latest corporate gifting trends, case studies, and insights from PrintKee.",
+  title: "Blog | Vorixa",
+  description: "Read the latest corporate gifting trends, case studies, and insights from Vorixa.",
   alternates: {
-    canonical: `https://printkee.com/blogs`,
+    canonical: `https://vorixa.com/blogs`,
   },
   openGraph: {
-    title: "Blog | Printkee",
-    description: "Read the latest corporate gifting trends, case studies, and insights from PrintKee.",
-    url: `https://printkee.com/blogs`,
-    siteName: 'Printkee',
+    title: "Blog | Vorixa",
+    description: "Read the latest corporate gifting trends, case studies, and insights from Vorixa.",
+    url: `https://vorixa.com/blogs`,
+    siteName: 'Vorixa',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Blog | Printkee",
-    description: "Read the latest corporate gifting trends, case studies, and insights from PrintKee.",
+    title: "Blog | Vorixa",
+    description: "Read the latest corporate gifting trends, case studies, and insights from Vorixa.",
   }
 };
 
@@ -40,7 +40,7 @@ export default async function BlogListPage() {
   }
 
   return (
-    <main className="printkee-page blogs-redesign">
+    <main className="vorixa-page blogs-redesign">
       <section className="blogs-redesign__hero">
         <div className="container blogs-redesign__hero-inner">
           <div>

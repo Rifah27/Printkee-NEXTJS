@@ -52,10 +52,10 @@ export default function BlogViewPage({ initialBlog }) {
           <div>
             <p className="home-kicker">Blog Article</p>
             <h1>{blog.title}</h1>
-            <p className="page-lead">{blog.description || 'Read the latest story from the PrintKee blog community, with practical tips, case studies, and business ideas.'}</p>
+            <p className="page-lead">{blog.description || 'Read the latest story from the Vorixa blog community, with practical tips, case studies, and business ideas.'}</p>
             <div className="blog-view-meta">
               <span>{publishedDate}</span>
-              <span>{blog.author || 'PrintKee Team'}</span>
+              <span>{blog.author || 'Vorixa Team'}</span>
               <span>{blog.category || 'General'}</span>
             </div>
             <Link href={`/blogs/edit/${params.id}`} className="home-btn home-btn--primary" aria-label="Edit this blog post">
@@ -107,7 +107,7 @@ export default function BlogViewPage({ initialBlog }) {
             <div className="page-feature-card">
               <p className="home-kicker">Post details</p>
               <strong>Author</strong>
-              <p>{blog.author || 'PrintKee Team'}</p>
+              <p>{blog.author || 'Vorixa Team'}</p>
               <strong>Category</strong>
               <p>{blog.category || 'General'}</p>
               <strong>Published</strong>

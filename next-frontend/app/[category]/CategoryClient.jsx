@@ -151,7 +151,7 @@ export default function CategoryPage({ initialCategory }) {
         <div className="container">
           <div className="catalog-section__head catalog-section__head--split">
             <div>
-              <p className="catalog-kicker">Why PrintKee</p>
+              <p className="catalog-kicker">Why Vorixa</p>
               <h2>Corporate gifting that looks organized from first sample to final dispatch</h2>
             </div>
             <p>Use the same dependable workflow whether you are ordering apparel, tech gifts, drinkware, office kits, or sustainable merchandise.</p>

@@ -165,7 +165,7 @@ export default function BlogPostPage() {
           </Link>
           <div className="blog-post-header">
             <p className="blog-post-kicker">Post a Blog</p>
-            <h1>Share a PrintKee story</h1>
+            <h1>Share a Vorixa story</h1>
             <p>Publish practical ideas, gifting guides, brand stories, and product inspiration with a featured image.</p>
           </div>
         </div>

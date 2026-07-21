@@ -30,7 +30,7 @@ export default function CustomBriefPage() {
       <section className="customize-hero">
         <div className="container customize-hero__inner">
           <div className="customize-hero__copy">
-            <p className="customize-kicker">Customize with PrintKee</p>
+            <p className="customize-kicker">Customize with Vorixa</p>
             <h1>Share your custom brief and we’ll recommend the best branded products.</h1>
             <p>
               Tell us your target audience, quantities, logo needs, packaging preferences, and delivery timeline.
