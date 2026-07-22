@@ -78,7 +78,7 @@ section {
   --header-green: #0f7b5f;
   --header-green-dark: #0b4e41;
   --header-coral: #f26a4f;
-  background: #fff;
+  background: #ffffff;
   box-shadow: 0 18px 40px rgba(15, 35, 31, 0.08);
   color: var(--header-ink);
   position: sticky;
