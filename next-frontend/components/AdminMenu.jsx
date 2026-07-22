@@ -48,10 +48,6 @@ export default function AdminMenu() {
         <span className="admin-menu__logo">
           <img src="/assets/vorixaLogo.png" alt="Vorixa" />
         </span>
-        <span>
-          <strong>Vorixa</strong>
-          <small>Catalog Admin</small>
-        </span>
       </Link>
 
       <div className="admin-menu__status">

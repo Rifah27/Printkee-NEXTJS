@@ -14,7 +14,6 @@ import {
 } from "react-icons/fi";
 import { api, authHeader, getPublicUrl } from "../lib/api";
 
-const emptySeo = { metaTitle: "", metaDescription: "", keywords: "" };
 const emptyItems = [];
 
 const textFromDescription = (value) => {
@@ -56,7 +55,7 @@ export default function AdminResourceManager({
   showTable = true,
   showToolbar = true,
   createLink,
-  pageSize,
+  pageSize = 10,
 }) {
   const blankForm = useMemo(() => {
     return fields.reduce((acc, field) => {
@@ -65,23 +64,30 @@ export default function AdminResourceManager({
     }, {});
   }, [fields]);
 
-  const [items, setItems] = useState(() => (seedItems.length ? seedItems : fallbackItems));
+  // allItems: the full list fetched from API (used for client-side pagination/search)
+  const [allItems, setAllItems] = useState(() =>
+    seedItems.length ? seedItems : fallbackItems
+  );
+  // serverSide: true when the API returns a paginated wrapper { items, totalItems, totalPages }
+  const [serverSide, setServerSide] = useState(false);
+  const [serverTotalPages, setServerTotalPages] = useState(1);
+
   const [form, setForm] = useState(blankForm);
   const [editingId, setEditingId] = useState(null);
   const [message, setMessage] = useState(null);
   const [loading, setLoading] = useState(Boolean(endpoints?.list));
   const [showLoadingOverlay, setShowLoadingOverlay] = useState(false);
   const [query, setQuery] = useState("");
+  const [debouncedQuery, setDebouncedQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalItems, setTotalItems] = useState(0);
-  const [totalPages, setTotalPages] = useState(1);
-  const endpointKey = useMemo(() => JSON.stringify(endpoints || {}), [endpoints]);
-  const [debouncedQuery, setDebouncedQuery] = useState(query);
 
+  const endpointKey = useMemo(() => JSON.stringify(endpoints || {}), [endpoints]);
+
+  // ─── Load items from API ─────────────────────────────────────────────────────
   const loadItems = useCallback(async () => {
     if (localStorageKey) {
       const saved = window.localStorage.getItem(localStorageKey);
-      setItems(saved ? JSON.parse(saved) : seedItems);
+      setAllItems(saved ? JSON.parse(saved) : seedItems);
       setLoading(false);
       return;
     }
@@ -90,29 +96,63 @@ export default function AdminResourceManager({
 
     setLoading(true);
     try {
-      const pageParam = currentPage || (endpoints.params && endpoints.params.page) || 1;
-      const limitParam = pageSize || (endpoints.params && endpoints.params.limit) || 10;
-      const params = { ...(endpoints.params || {}), page: pageParam, limit: limitParam };
-      if (debouncedQuery) params.search = debouncedQuery;
+      // Use a generous limit to fetch all items at once for client-side pagination.
+      // If the caller passes a limit in endpoints.params (e.g. 100) we use that;
+      // otherwise fall back to a high ceiling so we capture everything.
+      const limitParam =
+        (endpoints.params && endpoints.params.limit) || pageSize || 100;
+
+      // For server-side mode we send the real current page; for client-side always page 1.
+      const pageParam = serverSide ? currentPage : 1;
+
+      const params = {
+        ...(endpoints.params || {}),
+        page: pageParam,
+        limit: limitParam,
+      };
+
+      // Only send search to the server when we know the API handles it (server-side mode).
+      if (serverSide && debouncedQuery) params.search = debouncedQuery;
 
       const res = await api.get(endpoints.list, {
         headers: authHeader(),
         params,
       });
 
-      const rawItems = Array.isArray(res.data) ? res.data : res.data.items || [];
-      const nextItems = normalizeFromApi ? rawItems.map(normalizeFromApi) : rawItems;
+      // Detect whether the server returned a paginated wrapper or a plain array.
+      const isServerPaginated =
+        !Array.isArray(res.data) && res.data?.items !== undefined;
 
-      const respTotal = res.data?.totalItems ?? (Array.isArray(res.data) ? rawItems.length : 0);
-      const respPages = res.data?.totalPages ?? Math.max(1, Math.ceil(respTotal / limitParam));
+      if (isServerPaginated) {
+        const rawItems = res.data.items || [];
+        const nextItems = normalizeFromApi
+          ? rawItems.map(normalizeFromApi)
+          : rawItems;
+        const respPages =
+          res.data.totalPages ??
+          Math.max(1, Math.ceil((res.data.totalItems || 0) / pageSize));
+        setAllItems(nextItems);
+        setServerTotalPages(respPages);
+        if (!serverSide) setServerSide(true);
+      } else {
+        // Flat array — use client-side pagination & search
+        const rawItems = Array.isArray(res.data) ? res.data : [];
+        const nextItems = normalizeFromApi
+          ? rawItems.map(normalizeFromApi)
+          : rawItems;
+        setAllItems(nextItems);
+        setServerTotalPages(1);
+        if (serverSide) setServerSide(false);
+      }
 
-      setItems(nextItems);
-      setTotalItems(respTotal);
-      setTotalPages(respPages);
       setMessage(null);
     } catch (err) {
       console.error(err);
-      setItems(fallbackItems);
+      const fallback = normalizeFromApi
+        ? fallbackItems.map(normalizeFromApi)
+        : fallbackItems;
+      setAllItems(fallback);
+      setServerSide(false);
       setMessage(
         fallbackItems.length
           ? null
@@ -130,13 +170,14 @@ export default function AdminResourceManager({
     localStorageKey,
     normalizeFromApi,
     resourceLabel,
-    resourceName,
     seedItems,
+    serverSide,
     currentPage,
     debouncedQuery,
     pageSize,
   ]);
 
+  // Loading overlay with slight delay to avoid flash
   useEffect(() => {
     let t;
     if (loading) {
@@ -147,15 +188,34 @@ export default function AdminResourceManager({
     return () => clearTimeout(t);
   }, [loading]);
 
+  // Keep form in sync with field definitions
   useEffect(() => {
     setForm(blankForm);
   }, [blankForm]);
 
+  // Debounce search query
+  useEffect(() => {
+    const t = setTimeout(() => setDebouncedQuery(query), 300);
+    return () => clearTimeout(t);
+  }, [query]);
+
+  // Reset to page 1 whenever the search query changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [debouncedQuery]);
+
+  // Trigger data load
+  useEffect(() => {
+    loadItems();
+  }, [loadItems]);
+
+  // ─── Local storage helpers ───────────────────────────────────────────────────
   const persistLocalItems = (nextItems) => {
-    setItems(nextItems);
+    setAllItems(nextItems);
     window.localStorage.setItem(localStorageKey, JSON.stringify(nextItems));
   };
 
+  // ─── Form helpers ────────────────────────────────────────────────────────────
   const handleChange = (name, value) => {
     setForm((current) => ({ ...current, [name]: value }));
   };
@@ -167,22 +227,18 @@ export default function AdminResourceManager({
     try {
       const formData = new FormData();
       formData.append("image", file);
-      
       setMessage({ type: "info", text: "Uploading image..." });
-      
-      const uploadEndpoint = endpoints.list?.includes("product") 
-        ? "/product/upload" 
+
+      const uploadEndpoint = endpoints.list?.includes("product")
+        ? "/product/upload"
         : endpoints.list?.includes("hero")
-          ? "/hero/upload"
-          : "/category/upload";
-          
+        ? "/hero/upload"
+        : "/category/upload";
+
       const res = await api.post(uploadEndpoint, formData, {
-        headers: {
-          ...authHeader(),
-          "Content-Type": "multipart/form-data"
-        }
+        headers: { ...authHeader(), "Content-Type": "multipart/form-data" },
       });
-      
+
       setForm((current) => ({ ...current, [fieldName]: res.data.url }));
       setMessage({ type: "success", text: "Image uploaded successfully." });
     } catch (err) {
@@ -200,7 +256,9 @@ export default function AdminResourceManager({
     setEditingId(item._id || item.id);
     const nextForm = { ...blankForm };
     fields.forEach((field) => {
-      nextForm[field.name] = field.fromItem ? field.fromItem(item) : item[field.name] ?? "";
+      nextForm[field.name] = field.fromItem
+        ? field.fromItem(item)
+        : item[field.name] ?? "";
     });
     setForm(nextForm);
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -216,11 +274,13 @@ export default function AdminResourceManager({
         ...payload,
         id: editingId || `${resourceName}-${Date.now()}`,
         updatedAt: now,
-        createdAt: editingId ? items.find((item) => item.id === editingId)?.createdAt : now,
+        createdAt: editingId
+          ? allItems.find((item) => item.id === editingId)?.createdAt
+          : now,
       };
       const nextItems = editingId
-        ? items.map((item) => (item.id === editingId ? nextItem : item))
-        : [nextItem, ...items];
+        ? allItems.map((item) => (item.id === editingId ? nextItem : item))
+        : [nextItem, ...allItems];
       persistLocalItems(nextItems);
       setMessage({ type: "success", text: `${resourceLabel} saved.` });
       resetForm();
@@ -229,7 +289,9 @@ export default function AdminResourceManager({
 
     try {
       if (editingId) {
-        await api.put(`${endpoints.update}/${editingId}`, payload, { headers: authHeader() });
+        await api.put(`${endpoints.update}/${editingId}`, payload, {
+          headers: authHeader(),
+        });
         setMessage({ type: "success", text: `${resourceLabel} updated.` });
       } else {
         await api.post(endpoints.create, payload, { headers: authHeader() });
@@ -241,7 +303,8 @@ export default function AdminResourceManager({
       console.error(err);
       setMessage({
         type: "error",
-        text: err.response?.data?.message || `${resourceLabel} could not be saved.`,
+        text:
+          err.response?.data?.message || `${resourceLabel} could not be saved.`,
       });
     }
   };
@@ -250,7 +313,7 @@ export default function AdminResourceManager({
     if (!window.confirm(`Delete this ${resourceName}?`)) return;
 
     if (localStorageKey) {
-      persistLocalItems(items.filter((item) => item.id !== id));
+      persistLocalItems(allItems.filter((item) => item.id !== id));
       setMessage({ type: "success", text: `${resourceLabel} deleted.` });
       return;
     }
@@ -261,28 +324,46 @@ export default function AdminResourceManager({
       loadItems();
     } catch (err) {
       console.error(err);
-      setMessage({ type: "error", text: `${resourceLabel} could not be deleted.` });
+      setMessage({
+        type: "error",
+        text: `${resourceLabel} could not be deleted.`,
+      });
     }
   };
 
+  // ─── Pagination & filtering ──────────────────────────────────────────────────
 
-  const paginatedItems = items;
-  const pageCount = totalPages || 1;
+  // Client-side: filter all items by search query
+  const filteredItems = useMemo(() => {
+    if (serverSide) return allItems; // server already filtered
+    const q = debouncedQuery.trim().toLowerCase();
+    if (!q) return allItems;
+    return allItems.filter((item) =>
+      Object.values(item).some((v) =>
+        String(v ?? "")
+          .toLowerCase()
+          .includes(q)
+      )
+    );
+  }, [allItems, debouncedQuery, serverSide]);
+
+  const effectivePageSize = pageSize || 10;
+
+  const pageCount = serverSide
+    ? serverTotalPages
+    : Math.max(1, Math.ceil(filteredItems.length / effectivePageSize));
+
+  // Slice to current page for display
+  const paginatedItems = useMemo(() => {
+    if (serverSide) return filteredItems;
+    const start = (currentPage - 1) * effectivePageSize;
+    return filteredItems.slice(start, start + effectivePageSize);
+  }, [filteredItems, currentPage, effectivePageSize, serverSide]);
+
+  const totalItems = filteredItems.length;
   const showPagination = showTable && pageCount > 1;
 
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [debouncedQuery]);
-
-  useEffect(() => {
-    const t = setTimeout(() => setDebouncedQuery(query), 300);
-    return () => clearTimeout(t);
-  }, [query]);
-
-  useEffect(() => {
-    loadItems();
-  }, [loadItems]);
-
+  // ─── Render ──────────────────────────────────────────────────────────────────
   return (
     <>
       <div className="admin-page-head">
@@ -314,91 +395,131 @@ export default function AdminResourceManager({
           <div className="admin-editor__head">
             <div>
               <p className="admin-kicker">{editingId ? "Editing" : "Create"}</p>
-              <h2>{editingId ? `Update ${resourceName}` : createLabel || `Add ${resourceName}`}</h2>
+              <h2>
+                {editingId
+                  ? `Update ${resourceName}`
+                  : createLabel || `Add ${resourceName}`}
+              </h2>
             </div>
             {editingId && (
-              <button type="button" className="admin-btn admin-btn--ghost" onClick={resetForm}>
+              <button
+                type="button"
+                className="admin-btn admin-btn--ghost"
+                onClick={resetForm}
+              >
                 <FiX />
                 Cancel
               </button>
             )}
           </div>
 
-        <div className="admin-form-grid">
-          {fields.map((field) => (
-            <label
-              key={field.name}
-              className={field.type === "textarea" || field.wide ? "admin-field admin-field--wide" : "admin-field"}
-            >
-              <span>{field.label}</span>
-              {field.type === "select" ? (
-                <select
-                  value={form[field.name] ?? ""}
-                  onChange={(event) => handleChange(field.name, event.target.value)}
-                  required={field.required}
-                >
-                  <option value="">{field.placeholder || "Select"}</option>
-                  {(dependencies[field.optionsKey] || []).map((option) => (
-                    <option key={option._id} value={option._id}>
-                      {option.name}
-                    </option>
-                  ))}
-                </select>
-              ) : field.type === "textarea" ? (
-                <textarea
-                  value={form[field.name] ?? ""}
-                  onChange={(event) => handleChange(field.name, event.target.value)}
-                  placeholder={field.placeholder}
-                  required={field.required}
-                />
-              ) : field.name === "image" || field.name === "images" || field.type === "file" ? (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                  <input
-                    type="file"
-                    accept="image/*"
-                    onChange={(event) => handleImageUpload(event, field.name)}
+          <div className="admin-form-grid">
+            {fields.map((field) => (
+              <label
+                key={field.name}
+                className={
+                  field.type === "textarea" || field.wide
+                    ? "admin-field admin-field--wide"
+                    : "admin-field"
+                }
+              >
+                <span>{field.label}</span>
+                {field.type === "select" ? (
+                  <select
+                    value={form[field.name] ?? ""}
+                    onChange={(event) =>
+                      handleChange(field.name, event.target.value)
+                    }
+                    required={field.required}
+                  >
+                    <option value="">{field.placeholder || "Select"}</option>
+                    {(dependencies[field.optionsKey] || []).map((option) => (
+                      <option key={option._id} value={option._id}>
+                        {option.name}
+                      </option>
+                    ))}
+                  </select>
+                ) : field.type === "textarea" ? (
+                  <textarea
+                    value={form[field.name] ?? ""}
+                    onChange={(event) =>
+                      handleChange(field.name, event.target.value)
+                    }
+                    placeholder={field.placeholder}
+                    required={field.required}
                   />
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <span style={{ fontSize: '12px', color: '#666' }}>OR paste URL:</span>
+                ) : field.name === "image" ||
+                  field.name === "images" ||
+                  field.type === "file" ? (
+                  <div
+                    style={{ display: "flex", flexDirection: "column", gap: "8px" }}
+                  >
                     <input
-                      type="text"
-                      value={form[field.name] ?? ""}
-                      onChange={(event) => handleChange(field.name, event.target.value)}
-                      placeholder={field.placeholder}
-                      style={{ flex: 1 }}
+                      type="file"
+                      accept="image/*"
+                      onChange={(event) => handleImageUpload(event, field.name)}
                     />
-                  </div>
-                  {form[field.name] && (
-                    <div style={{ marginTop: '10px' }}>
-                      <img src={getPublicUrl(form[field.name])} alt="Preview" style={{ maxHeight: '100px', borderRadius: '8px' }} />
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "10px",
+                      }}
+                    >
+                      <span style={{ fontSize: "12px", color: "#666" }}>
+                        OR paste URL:
+                      </span>
+                      <input
+                        type="text"
+                        value={form[field.name] ?? ""}
+                        onChange={(event) =>
+                          handleChange(field.name, event.target.value)
+                        }
+                        placeholder={field.placeholder}
+                        style={{ flex: 1 }}
+                      />
                     </div>
-                  )}
-                </div>
-              ) : (
-                <input
-                  type={field.type || "text"}
-                  value={form[field.name] ?? ""}
-                  onChange={(event) => handleChange(field.name, event.target.value)}
-                  placeholder={field.placeholder}
-                  required={field.required}
-                  min={field.min}
-                />
-              )}
-            </label>
-          ))}
-        </div>
+                    {form[field.name] && (
+                      <div style={{ marginTop: "10px" }}>
+                        <img
+                          src={getPublicUrl(form[field.name])}
+                          alt="Preview"
+                          style={{ maxHeight: "100px", borderRadius: "8px" }}
+                        />
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <input
+                    type={field.type || "text"}
+                    value={form[field.name] ?? ""}
+                    onChange={(event) =>
+                      handleChange(field.name, event.target.value)
+                    }
+                    placeholder={field.placeholder}
+                    required={field.required}
+                    min={field.min}
+                  />
+                )}
+              </label>
+            ))}
+          </div>
 
-        <div className="admin-editor__actions">
-          <button type="submit" className="admin-btn admin-btn--primary">
-            {editingId ? <FiEdit3 /> : <FiPlus />}
-            {editingId ? "Save changes" : createLabel || `Create ${resourceName}`}
-          </button>
-          <button type="button" className="admin-btn admin-btn--ghost" onClick={loadItems}>
-            <FiRefreshCw />
-            Refresh
-          </button>
-        </div>
-      </form>
+          <div className="admin-editor__actions">
+            <button type="submit" className="admin-btn admin-btn--primary">
+              {editingId ? <FiEdit3 /> : <FiPlus />}
+              {editingId ? "Save changes" : createLabel || `Create ${resourceName}`}
+            </button>
+            <button
+              type="button"
+              className="admin-btn admin-btn--ghost"
+              onClick={loadItems}
+            >
+              <FiRefreshCw />
+              Refresh
+            </button>
+          </div>
+        </form>
       )}
 
       {showToolbar && showTable && (
@@ -411,13 +532,20 @@ export default function AdminResourceManager({
               placeholder={`Search ${resourceName}s`}
             />
           </div>
-          <span>{totalItems} total - {paginatedItems.length} shown</span>
+          <span>
+            {totalItems} {serverSide ? "total" : "matching"} &mdash;{" "}
+            {paginatedItems.length} shown
+          </span>
         </div>
       )}
 
       {showTable && (
         <div className="admin-table-section">
-          <div className={`admin-table-wrap ${loading ? "admin-table-wrap--loading" : ""}`}>
+          <div
+            className={`admin-table-wrap ${
+              loading ? "admin-table-wrap--loading" : ""
+            }`}
+          >
             <table className="admin-table">
               <thead>
                 <tr>
@@ -431,14 +559,28 @@ export default function AdminResourceManager({
                 {paginatedItems.map((item) => (
                   <tr key={item._id || item.id}>
                     {columns.map((column) => (
-                      <td key={column.key}>{column.render ? column.render(item) : item[column.key] || "-"}</td>
+                      <td key={column.key}>
+                        {column.render
+                          ? column.render(item)
+                          : item[column.key] || "-"}
+                      </td>
                     ))}
                     <td>
                       <div className="admin-row-actions">
-                        <button type="button" onClick={() => handleEdit(item)} title="Edit">
+                        <button
+                          type="button"
+                          onClick={() => handleEdit(item)}
+                          title="Edit"
+                        >
                           <FiEdit3 />
                         </button>
-                        <button type="button" onClick={() => handleDelete(item._id || item.id)} title="Delete">
+                        <button
+                          type="button"
+                          onClick={() =>
+                            handleDelete(item._id || item.id)
+                          }
+                          title="Delete"
+                        >
                           <FiTrash2 />
                         </button>
                       </div>
@@ -448,7 +590,9 @@ export default function AdminResourceManager({
                 {!paginatedItems.length && (
                   <tr>
                     <td colSpan={columns.length + 1}>
-                      <div className="admin-empty">No {resourceName}s found.</div>
+                      <div className="admin-empty">
+                        No {resourceName}s found.
+                      </div>
                     </td>
                   </tr>
                 )}
@@ -492,50 +636,158 @@ export default function AdminResourceManager({
 }
 
 export const categoryFields = [
-  { name: "name", label: "Category name", required: true, placeholder: "Apparel and Accessories" },
-  { name: "slug", label: "Slug", required: true, placeholder: "apparel-and-accessories" },
-  { name: "image", label: "Image URL", wide: true, placeholder: "/assets/categories/apparel.webp" },
-  { name: "description", label: "Description", type: "textarea", placeholder: "Short admin-facing category description" },
-  { name: "metaTitle", label: "SEO title", placeholder: "Custom Apparel & Accessories" },
-  { name: "keywords", label: "SEO keywords", placeholder: "custom apparel, corporate gifting" },
+  {
+    name: "name",
+    label: "Category name",
+    required: true,
+    placeholder: "Apparel and Accessories",
+  },
+  {
+    name: "slug",
+    label: "Slug",
+    required: true,
+    placeholder: "apparel-and-accessories",
+  },
+  {
+    name: "image",
+    label: "Image URL",
+    wide: true,
+    placeholder: "/assets/categories/apparel.webp",
+  },
+  {
+    name: "description",
+    label: "Description",
+    type: "textarea",
+    placeholder: "Short admin-facing category description",
+  },
+  {
+    name: "metaTitle",
+    label: "SEO title",
+    placeholder: "Custom Apparel & Accessories",
+  },
+  {
+    name: "keywords",
+    label: "SEO keywords",
+    placeholder: "custom apparel, corporate gifting",
+  },
   { name: "metaDescription", label: "SEO description", type: "textarea" },
 ];
 
 export const subcategoryFields = [
-  { name: "name", label: "Subcategory name", required: true, placeholder: "Custom Welcome Kits" },
-  { name: "slug", label: "Slug", required: true, placeholder: "welcome-kits" },
-  { name: "category", label: "Parent category", type: "select", optionsKey: "categories", required: true },
-  { name: "image", label: "Image URL", wide: true, placeholder: "/assets/subcategories/box.webp" },
+  {
+    name: "name",
+    label: "Subcategory name",
+    required: true,
+    placeholder: "Custom Welcome Kits",
+  },
+  {
+    name: "slug",
+    label: "Slug",
+    required: true,
+    placeholder: "welcome-kits",
+  },
+  {
+    name: "category",
+    label: "Parent category",
+    type: "select",
+    optionsKey: "categories",
+    required: true,
+  },
+  {
+    name: "image",
+    label: "Image URL",
+    wide: true,
+    placeholder: "/assets/subcategories/box.webp",
+  },
   { name: "description", label: "Description", type: "textarea" },
-  { name: "metaTitle", label: "SEO title", placeholder: "Custom Welcome Kits for Corporate Onboarding" },
-  { name: "keywords", label: "SEO keywords", placeholder: "welcome kits, onboarding gifts" },
+  {
+    name: "metaTitle",
+    label: "SEO title",
+    placeholder: "Custom Welcome Kits for Corporate Onboarding",
+  },
+  {
+    name: "keywords",
+    label: "SEO keywords",
+    placeholder: "welcome kits, onboarding gifts",
+  },
   { name: "metaDescription", label: "SEO description", type: "textarea" },
 ];
 
 export const productFields = [
-  { name: "name", label: "Product name", required: true, placeholder: "Premium Corporate Gift Mug" },
-  { name: "slug", label: "Slug", required: true, placeholder: "premium-corporate-gift-mug" },
+  {
+    name: "name",
+    label: "Product name",
+    required: true,
+    placeholder: "Premium Corporate Gift Mug",
+  },
+  {
+    name: "slug",
+    label: "Slug",
+    required: true,
+    placeholder: "premium-corporate-gift-mug",
+  },
   { name: "sku", label: "SKU", placeholder: "PK-MUG-001" },
-  { name: "category", label: "Category", type: "select", optionsKey: "categories", required: true },
-  { name: "subcategory", label: "Subcategory", type: "select", optionsKey: "subcategories", required: true },
+  {
+    name: "category",
+    label: "Category",
+    type: "select",
+    optionsKey: "categories",
+    required: true,
+  },
+  {
+    name: "subcategory",
+    label: "Subcategory",
+    type: "select",
+    optionsKey: "subcategories",
+    required: true,
+  },
   { name: "price", label: "Price", type: "number", required: true, min: "0" },
   { name: "salePrice", label: "Sale price", type: "number", min: "0" },
   { name: "stock", label: "Stock", type: "number", min: "0" },
-  { name: "images", label: "Image URLs", wide: true, placeholder: "/assets/products/coffee-mug/1.webp, /assets/products/coffee-mug/2.webp" },
+  {
+    name: "images",
+    label: "Image URLs",
+    wide: true,
+    placeholder:
+      "/assets/products/coffee-mug/1.webp, /assets/products/coffee-mug/2.webp",
+  },
   { name: "shortDescription", label: "Short description", type: "textarea" },
   { name: "longDescription", label: "Long description", type: "textarea" },
-  { name: "tags", label: "Tags", placeholder: "corporate gifts, logo printing, bulk order" },
+  {
+    name: "tags",
+    label: "Tags",
+    placeholder: "corporate gifts, logo printing, bulk order",
+  },
   { name: "colors", label: "Colors", placeholder: "Black, White, Navy" },
   { name: "sizes", label: "Sizes", placeholder: "S, M, L, XL" },
   { name: "material", label: "Material", placeholder: "Cotton blend" },
 ];
 
 export const bannerFields = [
-  { name: "title", label: "Banner title", required: true, placeholder: "Premium Corporate Gifting" },
-  { name: "section", label: "Section", required: true, placeholder: "Homepage hero" },
-  { name: "image", label: "Image URL", wide: true, placeholder: "/assets/banner1.webp" },
+  {
+    name: "title",
+    label: "Banner title",
+    required: true,
+    placeholder: "Premium Corporate Gifting",
+  },
+  {
+    name: "section",
+    label: "Section",
+    required: true,
+    placeholder: "Homepage hero",
+  },
+  {
+    name: "image",
+    label: "Image URL",
+    wide: true,
+    placeholder: "/assets/banner1.webp",
+  },
   { name: "cta", label: "Button label", placeholder: "Explore gifts" },
-  { name: "href", label: "Button link", placeholder: "/collection/welcome-kits" },
+  {
+    name: "href",
+    label: "Button link",
+    placeholder: "/collection/welcome-kits",
+  },
   { name: "description", label: "Banner copy", type: "textarea" },
 ];
 

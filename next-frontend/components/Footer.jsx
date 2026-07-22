@@ -49,10 +49,7 @@ export default function Footer() {
         <div className="site-footer__brand">
           <Link href="/" className="site-logo site-logo--footer" aria-label="Vorixa home">
             <span className="site-logo__mark" aria-hidden="true">
-              <img src="/assets/vorixaLogo.png" alt="" />
-            </span>
-            <span className="site-logo__text">
-              <b>Vorixa</b>
+              <img src="/assets/vorixaLogo.png" alt="Vorixa" />
             </span>
           </Link>
           <p>
