@@ -65,7 +65,7 @@
   }
 
   .color-swatches {
-    justify-content: flex-start; /* align swatches neatly */
+    justify-content: flex-start; 
     gap: 0.35rem;
   }
 
