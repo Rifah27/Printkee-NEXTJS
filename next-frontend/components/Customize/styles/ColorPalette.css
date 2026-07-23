@@ -2,9 +2,7 @@
 .color-palette-container {
   padding: 1.5rem;
   border-radius: 8px;
-  /* Optional: add background & shadow if needed */
-  /* background-color: #fff; */
-  /* box-shadow: 0 2px 8px rgba(0,0,0,0.1); */
+
 }
 
 /* Each row in the palette */

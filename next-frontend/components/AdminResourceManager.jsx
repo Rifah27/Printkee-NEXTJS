@@ -47,7 +47,7 @@ export default function AdminResourceManager({
   normalizeFromApi,
   normalizeToApi,
   dependencies = {},
-  seedItems = [],
+  seedItems = emptyItems,
   fallbackItems = emptyItems,
   localStorageKey,
   createLabel,
