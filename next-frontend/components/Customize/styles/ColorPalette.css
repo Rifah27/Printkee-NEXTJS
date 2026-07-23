@@ -17,7 +17,6 @@
   font-size: 1rem;
 }
 
-/* Swatches container */
 .color-swatches {
   display: flex;
   flex-wrap: wrap;
