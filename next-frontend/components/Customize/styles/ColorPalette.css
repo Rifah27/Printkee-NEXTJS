@@ -53,7 +53,6 @@
   }
 }
 
-/* Mobile / Small screens */
 @media (max-width: 480px) {
   .color-palette-label {
     font-size: 0.9rem;
